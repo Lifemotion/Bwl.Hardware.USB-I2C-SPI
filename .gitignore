@@ -1,0 +1,15 @@
+.vs
+bin
+obj
+debug
+Debug
+Release
+release
+*.elf
+*.bak
+*.atsuo
+*.suo
+archive.zip
+*.fw.update
+*.zip1
+~*
