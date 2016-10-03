@@ -66,8 +66,6 @@ void uart_send(unsigned char var, unsigned char data){
 	CDC_Device_SendByte(&VirtualSerial_CDC_Interface, data);
 }
 
-
-
 void i2c_init(void)
 {
 	PORTD |= (1<<0)|(1<<1);
@@ -168,10 +166,10 @@ int main (void)
 	SetupHardware();
 	CDC_Device_CreateStream(&VirtualSerial_CDC_Interface, &USBSerialStream);
 	GlobalInterruptEnable();
+	//user functions
 	sserial_set_devname(DEV_NAME);
 	i2c_init();
 	spi_init();
-	DDRD |= (1<<5);	
 	while(1){
 		sserial_poll_uart(0);	
 		CDC_Device_USBTask(&VirtualSerial_CDC_Interface);
@@ -179,6 +177,7 @@ int main (void)
 	}
 }
 
+//configuration for USB 
 void SetupHardware(void)
 {	
 	MCUSR &= ~(1 << WDRF);
@@ -186,30 +185,31 @@ void SetupHardware(void)
 	USB_Init();
 }
 
+
+//callback for USB 
 void EVENT_USB_Device_Connect(void)
 {
 
 }
-
+//callback for USB 
 void EVENT_USB_Device_Disconnect(void)
 {
 
 }
-
+//callback for USB 
 void EVENT_USB_Device_ConfigurationChanged(void)
 {
 	bool ConfigSuccess = true;
 	ConfigSuccess &= CDC_Device_ConfigureEndpoints(&VirtualSerial_CDC_Interface);
 }
 
-
+//callback for USB 
 void EVENT_USB_Device_ControlRequest(void)
 {
 	CDC_Device_ProcessControlRequest(&VirtualSerial_CDC_Interface);
 }
-
-
+//callback for USB 
 void EVENT_CDC_Device_ControLineStateChanged(USB_ClassInfo_CDC_Device_t *const CDCInterfaceInfo)
 {
-	//bool HostReady = (CDCInterfaceInfo->State.ControlLineStates.HostToDevice & CDC_CONTROL_LINE_OUT_DTR) != 0;
+
 }
