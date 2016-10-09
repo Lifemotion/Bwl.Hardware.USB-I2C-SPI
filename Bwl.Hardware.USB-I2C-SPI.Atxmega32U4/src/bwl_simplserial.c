@@ -279,6 +279,8 @@ void sserial_poll_uart(unsigned char portindex)
 	sserial_send_end();
 	if (uart_received(sserial_portindex))
 	{
+		DDRD |= (1<<5);
+		PORTD ^= (1<<5);
 		static byte lastbyte;
 		byte currbyte=uart_get(sserial_portindex);
 		

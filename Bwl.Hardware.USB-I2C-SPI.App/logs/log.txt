@@ -1,0 +1,5 @@
+09.10.2016 13:07:51 ROOT [Msg] Application startup
+09.10.2016 13:07:51 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Bwl.Hardware.USB-I2C-SPI.App\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+09.10.2016 13:07:51 ROOT [Inf] Application executable date: 09.10.2016 13:07:49
+09.10.2016 13:07:51 ROOT [Msg] Готов к работе
+09.10.2016 13:07:54 ROOT [Msg] USB2TWI Adapter

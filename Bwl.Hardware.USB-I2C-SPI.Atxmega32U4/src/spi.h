@@ -4,10 +4,10 @@
 
 #define SPI_DDRX	DDRB
 #define SPI_PORTX	PORTB
-#define SPI_SS		PB2
-#define SPI_MOSI	PB3
-#define SPI_MISO	PB4
-#define SPI_SCK		PB5
+#define SPI_SS		PB0
+#define SPI_MOSI	PB2
+#define SPI_MISO	PB3
+#define SPI_SCK		PB1
 
 #include <stdint.h>
 

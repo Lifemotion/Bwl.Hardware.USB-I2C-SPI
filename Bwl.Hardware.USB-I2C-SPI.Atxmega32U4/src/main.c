@@ -8,7 +8,7 @@
 
 #define WR 0x00
 #define RD 0x01
-#define DEV_NAME "USB2TWI Adapter     "
+#define DEV_NAME "TWI/SPI Adapter Atmega32U4"
 
 static FILE USBSerialStream;
 int16_t recveived_byte;
@@ -85,14 +85,13 @@ void sserial_process_request()
 		char dev_addr = sserial_request.data[0]*2;
 		char regiser  = sserial_request.data[1];
 		char resp = 0;
-		i2c_start();
+	    i2c_start();
 		i2c_write_byte(dev_addr|WR);
 		i2c_write_byte(regiser);
 		i2c_start();
 		i2c_write_byte(dev_addr|RD);
 		resp = i2c_read_last_byte();
 		i2c_stop();
-
 		sserial_response.result    = 0;
 		sserial_response.datalength= 1;
 		sserial_response.data[0]   = resp;
@@ -138,19 +137,20 @@ void sserial_process_request()
 
 	if(sserial_request.command==4){
 		char i = 0;
+		sserial_response.datalength = sserial_request.datalength;
 		spi_select();
 		for(i=0;i<sserial_request.datalength;i++){
-			spi_write(sserial_request.data[i]);
+			sserial_response.data[i] = spi_read(sserial_request.data[i]);
+			//spi_read(sserial_request.data[i]);
+			//sserial_response.data[i] = sserial_request.data[i];
 		}
 		spi_unselect();
-		sserial_response.result    = 0;
-		sserial_response.datalength= 0;
+		sserial_response.result = 0;
 		sserial_send_response();
 
 	}
 
 	if(sserial_request.command==5){
-		//char i = 0;
 		spi_select();
 		sserial_response.datalength = sserial_request.data[0];
 		spi_read_array(sserial_request.data[0], sserial_response.data);
@@ -158,6 +158,23 @@ void sserial_process_request()
 		sserial_response.result    = 0;
 		sserial_send_response();
 	}
+}
+
+void rfm69_writereg(byte addr, byte value)
+{
+	spi_select();
+	spi_read(addr | 0x80);
+	spi_read(value);
+	spi_unselect();
+}
+
+byte rfm69_readreg(byte addr)
+{
+	spi_select();
+	spi_read(addr & 0x7F);
+	byte regval = spi_read(0);
+	spi_unselect();
+	return regval;
 }
 
 int main (void)
@@ -171,7 +188,7 @@ int main (void)
 	i2c_init();
 	spi_init();
 	while(1){
-		sserial_poll_uart(0);	
+		sserial_poll_uart(0);
 		CDC_Device_USBTask(&VirtualSerial_CDC_Interface);
 		USB_USBTask();	
 	}
