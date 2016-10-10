@@ -1,4 +1,5 @@
-﻿Imports System.IO.Ports
+﻿Imports System.IO
+Imports System.IO.Ports
 Imports System.Threading
 Imports Bwl.Framework
 
@@ -8,6 +9,7 @@ Public Class Form1
     Private adp = Nothing
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        File.Delete("spi_log.txt")
         Dim ports As String() = SerialPort.GetPortNames()
         textSpiCycleCount.Text = "10"
         textSpiCycleDelay.Text = "1000"
@@ -103,8 +105,9 @@ Public Class Form1
             End If
         Next
         Dim data = adp.SpiReadArray(bytes)
-        'spi_incom_data.Text = spi_incom_data.Text + BitConverter.ToString(data).Replace("-", " ") + Environment.NewLine + "------------" + Environment.NewLine
-        Invoke(Sub() spi_incom_data.Text = spi_incom_data.Text + BitConverter.ToString(data).Replace("-", " ") + Environment.NewLine + "------------" + Environment.NewLine)
+        File.AppendAllText("spi_log.txt", "REQ: " + BitConverter.ToString(bytes).Replace("-", " ") + Environment.NewLine)
+        File.AppendAllText("spi_log.txt", "RES: " + BitConverter.ToString(data).Replace("-", " ") + Environment.NewLine + Environment.NewLine)
+        Invoke(Sub() spi_incom_data.Text = spi_incom_data.Text + BitConverter.ToString(data).Replace("-", " ") + Environment.NewLine)
         Invoke(Sub() _logger.AddMessage("SPI передача выполнена"))
         Invoke(Sub()
                    spi_incom_data.SelectionStart = spi_incom_data.Text.Length
@@ -117,6 +120,11 @@ Public Class Form1
         For i As Integer = cycleCount To 0 Step -1
             SpiCmd()
             Invoke(Sub() textSpiCycleCount.Text = i)
+            Invoke(Sub()
+                       spi_incom_data.SelectionStart = spi_incom_data.Text.Length
+                       spi_incom_data.ScrollToCaret()
+                   End Sub)
+            Invoke(Sub() spi_incom_data.Text = spi_incom_data.Text + "-----------------" + Environment.NewLine)
             Invoke(Sub()
                        spi_incom_data.SelectionStart = spi_incom_data.Text.Length
                        spi_incom_data.ScrollToCaret()
@@ -154,7 +162,9 @@ Public Class Form1
     End Sub
 
     Private Sub SPI_data_to_write_TextChanged(sender As Object, e As EventArgs) Handles SPI_data_to_write.TextChanged
+        Dim currentPosition = SPI_data_to_write.SelectionStart
         SPI_data_to_write.Text = SPI_data_to_write.Text.ToUpper()
+        SPI_data_to_write.SelectionStart = currentPosition
     End Sub
 
     Private Sub logWriter_Load(sender As Object, e As EventArgs) Handles logWriter.Load
@@ -181,4 +191,13 @@ Public Class Form1
             bSpiCycleStart.Text = "GO!"
         End If
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If File.Exists("spi_log.txt") Then
+            Process.Start("spi_log.txt")
+        Else
+            _logger.AddMessage("Логи SPI отсутствуют")
+        End If
+    End Sub
+
 End Class

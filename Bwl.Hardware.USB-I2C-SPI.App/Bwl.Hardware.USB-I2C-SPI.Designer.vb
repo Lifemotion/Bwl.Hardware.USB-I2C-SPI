@@ -52,20 +52,21 @@ Partial Class Form1
         Me.port_list = New System.Windows.Forms.ComboBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.bSpiCycleStart = New System.Windows.Forms.Button()
+        Me.textSpiCycleDelay = New System.Windows.Forms.TextBox()
+        Me.textSpiCycleCount = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.textSpiDelayCmd = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.textSpiDelayCmd = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.textSpiCycleCount = New System.Windows.Forms.TextBox()
-        Me.textSpiCycleDelay = New System.Windows.Forms.TextBox()
-        Me.bSpiCycleStart = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox5.SuspendLayout()
         Me.groupBox1.SuspendLayout()
         Me.groupBox2.SuspendLayout()
@@ -73,9 +74,9 @@ Partial Class Form1
         Me.GroupBox4.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        Me.GroupBox6.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
         'logWriter
@@ -328,7 +329,7 @@ Partial Class Form1
         '
         'spi_incom_data
         '
-        Me.spi_incom_data.Font = New System.Drawing.Font("Consolas", 8.25!)
+        Me.spi_incom_data.Font = New System.Drawing.Font("Consolas", 9.0!)
         Me.spi_incom_data.Location = New System.Drawing.Point(15, 128)
         Me.spi_incom_data.Multiline = True
         Me.spi_incom_data.Name = "spi_incom_data"
@@ -338,7 +339,7 @@ Partial Class Form1
         '
         'SPI_data_to_write
         '
-        Me.SPI_data_to_write.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.SPI_data_to_write.Font = New System.Drawing.Font("Consolas", 9.0!)
         Me.SPI_data_to_write.Location = New System.Drawing.Point(15, 19)
         Me.SPI_data_to_write.Multiline = True
         Me.SPI_data_to_write.Name = "SPI_data_to_write"
@@ -369,10 +370,11 @@ Partial Class Form1
         '
         'port_list
         '
+        Me.port_list.Font = New System.Drawing.Font("Consolas", 9.0!)
         Me.port_list.FormattingEnabled = True
         Me.port_list.Location = New System.Drawing.Point(619, 49)
         Me.port_list.Name = "port_list"
-        Me.port_list.Size = New System.Drawing.Size(77, 21)
+        Me.port_list.Size = New System.Drawing.Size(77, 22)
         Me.port_list.TabIndex = 28
         '
         'TabControl1
@@ -389,6 +391,7 @@ Partial Class Form1
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Button2)
         Me.TabPage1.Controls.Add(Me.GroupBox7)
         Me.TabPage1.Controls.Add(Me.GroupBox6)
         Me.TabPage1.Controls.Add(Me.GroupBox4)
@@ -399,6 +402,124 @@ Partial Class Form1
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "SPI адаптер"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'GroupBox7
+        '
+        Me.GroupBox7.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.GroupBox7.Controls.Add(Me.bSpiCycleStart)
+        Me.GroupBox7.Controls.Add(Me.textSpiCycleDelay)
+        Me.GroupBox7.Controls.Add(Me.textSpiCycleCount)
+        Me.GroupBox7.Controls.Add(Me.Label12)
+        Me.GroupBox7.Controls.Add(Me.Label11)
+        Me.GroupBox7.Location = New System.Drawing.Point(322, 132)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Size = New System.Drawing.Size(277, 126)
+        Me.GroupBox7.TabIndex = 33
+        Me.GroupBox7.TabStop = False
+        Me.GroupBox7.Text = "Циклическая отправка"
+        '
+        'bSpiCycleStart
+        '
+        Me.bSpiCycleStart.Font = New System.Drawing.Font("Consolas", 9.0!)
+        Me.bSpiCycleStart.Location = New System.Drawing.Point(9, 85)
+        Me.bSpiCycleStart.Name = "bSpiCycleStart"
+        Me.bSpiCycleStart.Size = New System.Drawing.Size(264, 23)
+        Me.bSpiCycleStart.TabIndex = 4
+        Me.bSpiCycleStart.Text = "GO!"
+        Me.bSpiCycleStart.UseVisualStyleBackColor = True
+        '
+        'textSpiCycleDelay
+        '
+        Me.textSpiCycleDelay.Font = New System.Drawing.Font("Consolas", 9.0!)
+        Me.textSpiCycleDelay.Location = New System.Drawing.Point(191, 59)
+        Me.textSpiCycleDelay.Name = "textSpiCycleDelay"
+        Me.textSpiCycleDelay.Size = New System.Drawing.Size(80, 22)
+        Me.textSpiCycleDelay.TabIndex = 3
+        '
+        'textSpiCycleCount
+        '
+        Me.textSpiCycleCount.Font = New System.Drawing.Font("Consolas", 9.0!)
+        Me.textSpiCycleCount.Location = New System.Drawing.Point(191, 28)
+        Me.textSpiCycleCount.Name = "textSpiCycleCount"
+        Me.textSpiCycleCount.Size = New System.Drawing.Size(80, 22)
+        Me.textSpiCycleCount.TabIndex = 2
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(6, 62)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(181, 13)
+        Me.Label12.TabIndex = 1
+        Me.Label12.Text = "Задержка между повторами в мс:"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(6, 31)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(119, 13)
+        Me.Label11.TabIndex = 0
+        Me.Label11.Text = "Количество повторов:"
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.GroupBox6.Controls.Add(Me.textSpiDelayCmd)
+        Me.GroupBox6.Controls.Add(Me.Label10)
+        Me.GroupBox6.Controls.Add(Me.Label9)
+        Me.GroupBox6.Controls.Add(Me.Label8)
+        Me.GroupBox6.Controls.Add(Me.Label7)
+        Me.GroupBox6.Location = New System.Drawing.Point(322, 7)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(277, 117)
+        Me.GroupBox6.TabIndex = 32
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "Задержки"
+        '
+        'textSpiDelayCmd
+        '
+        Me.textSpiDelayCmd.Font = New System.Drawing.Font("Consolas", 9.0!)
+        Me.textSpiDelayCmd.Location = New System.Drawing.Point(191, 81)
+        Me.textSpiDelayCmd.Name = "textSpiDelayCmd"
+        Me.textSpiDelayCmd.Size = New System.Drawing.Size(80, 22)
+        Me.textSpiDelayCmd.TabIndex = 4
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(6, 84)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(167, 13)
+        Me.Label10.TabIndex = 3
+        Me.Label10.Text = "Пауза между передачами в мс:"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(6, 50)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(131, 13)
+        Me.Label9.TabIndex = 2
+        Me.Label9.Text = "с указанной задержкой:"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(6, 37)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(271, 13)
+        Me.Label8.TabIndex = 1
+        Me.Label8.Text = "позволяет выполнить раздельную отправку данных"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(6, 24)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(242, 13)
+        Me.Label7.TabIndex = 0
+        Me.Label7.Text = "Использование "";"" в последовательноси байт"
         '
         'TabPage2
         '
@@ -416,125 +537,20 @@ Partial Class Form1
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(485, 307)
+        Me.TabPage3.Size = New System.Drawing.Size(605, 307)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "1-Wire адптер"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'GroupBox6
+        'Button2
         '
-        Me.GroupBox6.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.GroupBox6.Controls.Add(Me.textSpiDelayCmd)
-        Me.GroupBox6.Controls.Add(Me.Label10)
-        Me.GroupBox6.Controls.Add(Me.Label9)
-        Me.GroupBox6.Controls.Add(Me.Label8)
-        Me.GroupBox6.Controls.Add(Me.Label7)
-        Me.GroupBox6.Location = New System.Drawing.Point(322, 7)
-        Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(277, 117)
-        Me.GroupBox6.TabIndex = 32
-        Me.GroupBox6.TabStop = False
-        Me.GroupBox6.Text = "Задержки"
-        '
-        'GroupBox7
-        '
-        Me.GroupBox7.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.GroupBox7.Controls.Add(Me.bSpiCycleStart)
-        Me.GroupBox7.Controls.Add(Me.textSpiCycleDelay)
-        Me.GroupBox7.Controls.Add(Me.textSpiCycleCount)
-        Me.GroupBox7.Controls.Add(Me.Label12)
-        Me.GroupBox7.Controls.Add(Me.Label11)
-        Me.GroupBox7.Location = New System.Drawing.Point(322, 132)
-        Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(277, 169)
-        Me.GroupBox7.TabIndex = 33
-        Me.GroupBox7.TabStop = False
-        Me.GroupBox7.Text = "Циклическая отправка"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(6, 24)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(242, 13)
-        Me.Label7.TabIndex = 0
-        Me.Label7.Text = "Использование "";"" в последовательноси байт"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(6, 37)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(271, 13)
-        Me.Label8.TabIndex = 1
-        Me.Label8.Text = "позволяет выполнить раздельную отправку данных"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(6, 50)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(131, 13)
-        Me.Label9.TabIndex = 2
-        Me.Label9.Text = "с указанной задержкой:"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(6, 84)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(167, 13)
-        Me.Label10.TabIndex = 3
-        Me.Label10.Text = "Пауза между передачами в мс:"
-        '
-        'textSpiDelayCmd
-        '
-        Me.textSpiDelayCmd.Location = New System.Drawing.Point(191, 81)
-        Me.textSpiDelayCmd.Name = "textSpiDelayCmd"
-        Me.textSpiDelayCmd.Size = New System.Drawing.Size(80, 20)
-        Me.textSpiDelayCmd.TabIndex = 4
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(6, 76)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(119, 13)
-        Me.Label11.TabIndex = 0
-        Me.Label11.Text = "Количество повторов:"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(6, 102)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(181, 13)
-        Me.Label12.TabIndex = 1
-        Me.Label12.Text = "Задержка между повторами в мс:"
-        '
-        'textSpiCycleCount
-        '
-        Me.textSpiCycleCount.Location = New System.Drawing.Point(191, 73)
-        Me.textSpiCycleCount.Name = "textSpiCycleCount"
-        Me.textSpiCycleCount.Size = New System.Drawing.Size(80, 20)
-        Me.textSpiCycleCount.TabIndex = 2
-        '
-        'textSpiCycleDelay
-        '
-        Me.textSpiCycleDelay.Location = New System.Drawing.Point(191, 99)
-        Me.textSpiCycleDelay.Name = "textSpiCycleDelay"
-        Me.textSpiCycleDelay.Size = New System.Drawing.Size(80, 20)
-        Me.textSpiCycleDelay.TabIndex = 3
-        '
-        'bSpiCycleStart
-        '
-        Me.bSpiCycleStart.Font = New System.Drawing.Font("Consolas", 9.0!)
-        Me.bSpiCycleStart.Location = New System.Drawing.Point(7, 130)
-        Me.bSpiCycleStart.Name = "bSpiCycleStart"
-        Me.bSpiCycleStart.Size = New System.Drawing.Size(264, 23)
-        Me.bSpiCycleStart.TabIndex = 4
-        Me.bSpiCycleStart.Text = "GO!"
-        Me.bSpiCycleStart.UseVisualStyleBackColor = True
+        Me.Button2.Font = New System.Drawing.Font("Consolas", 9.0!)
+        Me.Button2.Location = New System.Drawing.Point(322, 262)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(277, 23)
+        Me.Button2.TabIndex = 34
+        Me.Button2.Text = "Открыть лог SPI"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -564,11 +580,11 @@ Partial Class Form1
         Me.GroupBox4.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
-        Me.TabPage2.ResumeLayout(False)
-        Me.GroupBox6.ResumeLayout(False)
-        Me.GroupBox6.PerformLayout()
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox7.PerformLayout()
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
+        Me.TabPage2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -619,4 +635,5 @@ Partial Class Form1
     Friend WithEvents Label11 As Label
     Friend WithEvents textSpiDelayCmd As TextBox
     Friend WithEvents Label10 As Label
+    Friend WithEvents Button2 As Button
 End Class
