@@ -1,13 +1,18 @@
 ﻿Imports System.IO.Ports
+Imports System.Threading
 Imports Bwl.Framework
 
 Public Class Form1
     Inherits FormAppBase
 
-    Private adp As Adapter
+    Private adp = Nothing
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim ports As String() = SerialPort.GetPortNames()
+        textSpiCycleCount.Text = "10"
+        textSpiCycleDelay.Text = "1000"
+        textSpiDelayCmd.Text = "100"
+
         For Each p As String In ports
             port_list.Items.Add(p)
         Next
@@ -15,6 +20,10 @@ Public Class Form1
     End Sub
 
     Private Sub bRdReg_Click(sender As Object, e As EventArgs) Handles bRdReg.Click
+        If adp Is Nothing Then
+            _logger.AddMessage("Установите подключение к адаптеру!")
+            Return
+        End If
         Dim addr As Byte = Convert.ToByte(dev_addr.Text, 16)
         Dim reg_addr As Byte = Convert.ToByte(rd_reg_addr.Text, 16)
         Dim resp As Byte = adp.ReadRegister(addr, reg_addr)
@@ -38,6 +47,10 @@ Public Class Form1
     End Sub
 
     Private Sub write_reg_Click(sender As Object, e As EventArgs) Handles write_reg.Click
+        If adp Is Nothing Then
+            _logger.AddMessage("Установите подключение к адаптеру!")
+            Return
+        End If
         Dim rg_addr As Byte = Convert.ToByte(wr_reg_addr.Text, 16)
         Dim rg_value As Byte = Convert.ToByte(reg_val.Text, 16)
         Dim addr As Byte = Convert.ToByte(dev_addr.Text, 16)
@@ -46,6 +59,10 @@ Public Class Form1
     End Sub
 
     Private Sub bRdSomeReg_Click(sender As Object, e As EventArgs) Handles bRdSomeReg.Click
+        If adp Is Nothing Then
+            _logger.AddMessage("Установите подключение к адаптеру!")
+            Return
+        End If
         Dim rg_addr As Byte = Convert.ToByte(rd_some_reg_addr.Text, 16)
         Dim count As Byte = Convert.ToByte(rd_cnt.Text, 16)
         Dim addr As Byte = Convert.ToByte(dev_addr.Text, 16)
@@ -70,9 +87,9 @@ Public Class Form1
         Next
     End Sub
 
-    Private Sub bSPI_Read_Click(sender As Object, e As EventArgs) Handles bSPI_Read.Click
-        If SPI_data_to_write.Text.Length < 2 Then Return
-        Dim str_bytes = SPI_data_to_write.Text.Split(" ")
+    Private Sub SpiCmdProcess(str As String)
+        If str.Length < 2 Then Return
+        Dim str_bytes = str.Split(" ")
         Dim bytes(str_bytes.Length - 1) As Byte
         For index As Integer = 0 To str_bytes.Length - 1
             If str_bytes(index).Length > 1 Then
@@ -85,12 +102,51 @@ Public Class Form1
                 End If
             End If
         Next
-        ' SPI_data_to_write.Text = ""
         Dim data = adp.SpiReadArray(bytes)
-        spi_incom_data.Text = spi_incom_data.Text + BitConverter.ToString(data).Replace("-", " ") + Environment.NewLine + "------------" + Environment.NewLine
-        spi_incom_data.SelectionStart = spi_incom_data.TextLength
-        spi_incom_data.ScrollToCaret()
-        _logger.AddMessage("Обмен данными SPI...")
+        'spi_incom_data.Text = spi_incom_data.Text + BitConverter.ToString(data).Replace("-", " ") + Environment.NewLine + "------------" + Environment.NewLine
+        Invoke(Sub() spi_incom_data.Text = spi_incom_data.Text + BitConverter.ToString(data).Replace("-", " ") + Environment.NewLine + "------------" + Environment.NewLine)
+        Invoke(Sub() _logger.AddMessage("SPI передача выполнена"))
+        Invoke(Sub()
+                   spi_incom_data.SelectionStart = spi_incom_data.Text.Length
+                   spi_incom_data.ScrollToCaret()
+               End Sub)
+    End Sub
+
+    Public Sub SpiCycleProcess()
+        Dim cycleCount As Integer = CInt(textSpiCycleCount.Text)
+        For i As Integer = cycleCount To 0 Step -1
+            SpiCmd()
+            Invoke(Sub() textSpiCycleCount.Text = i)
+            Invoke(Sub()
+                       spi_incom_data.SelectionStart = spi_incom_data.Text.Length
+                       spi_incom_data.ScrollToCaret()
+                   End Sub)
+            Thread.Sleep(textSpiCycleDelay.Text)
+        Next
+        Invoke(Sub() bSpiCycleStart.Text = "GO!")
+    End Sub
+
+    Private Sub SpiCmd()
+        Dim Str As String = ""
+        For i As Integer = 0 To SPI_data_to_write.Lines.Length - 1
+            Str += SPI_data_to_write.Lines(i)
+        Next
+        Dim cmds = Str.Split(";")
+        For index As Integer = 0 To cmds.Length - 1
+            SpiCmdProcess(cmds(index))
+            Thread.Sleep(textSpiDelayCmd.Text)
+        Next
+    End Sub
+
+    Private Sub bSPI_Read_Click(sender As Object, e As EventArgs) Handles bSPI_Read.Click
+        If adp Is Nothing Then
+            _logger.AddMessage("Установите подключение к адаптеру!")
+            Return
+        End If
+        If SPI_data_to_write.Text.Length < 2 Then Return
+        Dim th As New Thread(AddressOf SpiCmd)
+        th.Start()
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -99,10 +155,30 @@ Public Class Form1
 
     Private Sub SPI_data_to_write_TextChanged(sender As Object, e As EventArgs) Handles SPI_data_to_write.TextChanged
         SPI_data_to_write.Text = SPI_data_to_write.Text.ToUpper()
-        SPI_data_to_write.SelectionStart = SPI_data_to_write.TextLength
     End Sub
 
     Private Sub logWriter_Load(sender As Object, e As EventArgs) Handles logWriter.Load
 
+    End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+
+    End Sub
+
+    Dim spi_thread As Thread
+
+    Private Sub bSpiCycleStart_Click(sender As Object, e As EventArgs) Handles bSpiCycleStart.Click
+        If adp Is Nothing Then
+            _logger.AddMessage("Установите подключение к адаптеру!")
+            Return
+        End If
+        If bSpiCycleStart.Text = "GO!" Then
+            spi_thread = New Thread(AddressOf SpiCycleProcess)
+            spi_thread.Start()
+            bSpiCycleStart.Text = "STOP"
+        Else
+            spi_thread.Abort()
+            bSpiCycleStart.Text = "GO!"
+        End If
     End Sub
 End Class

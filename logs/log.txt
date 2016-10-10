@@ -1,0 +1,955 @@
+09.10.2016 23:45:32 ROOT [Msg] Application startup
+09.10.2016 23:45:32 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Release\Bwl.Hardware.USB-I2C-SPI.App.exe
+09.10.2016 23:45:32 ROOT [Inf] Application executable date: 09.10.2016 13:10:16
+09.10.2016 23:45:32 ROOT [Msg] Готов к работе
+09.10.2016 23:45:37 ROOT [Msg] TWI/SPI Adapter Atmega32U4
+09.10.2016 23:46:07 ROOT [Msg] Обмен данными SPI...
+09.10.2016 23:46:08 ROOT [Msg] Обмен данными SPI...
+09.10.2016 23:46:24 ROOT [Msg] Обмен данными SPI...
+09.10.2016 23:46:28 ROOT [Msg] Обмен данными SPI...
+09.10.2016 23:46:28 ROOT [Msg] Обмен данными SPI...
+09.10.2016 23:46:28 ROOT [Msg] Обмен данными SPI...
+09.10.2016 23:47:06 ROOT [Msg] Обмен данными SPI...
+09.10.2016 23:47:07 ROOT [Msg] Обмен данными SPI...
+09.10.2016 23:47:07 ROOT [Msg] Обмен данными SPI...
+09.10.2016 23:47:08 ROOT [Msg] Обмен данными SPI...
+09.10.2016 23:47:08 ROOT [Msg] Обмен данными SPI...
+09.10.2016 23:47:17 ROOT [Msg] Обмен данными SPI...
+09.10.2016 23:49:39 ROOT [Msg] Application startup
+09.10.2016 23:49:39 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Release\Bwl.Hardware.USB-I2C-SPI.App.exe
+09.10.2016 23:49:39 ROOT [Inf] Application executable date: 09.10.2016 23:49:37
+09.10.2016 23:49:39 ROOT [Msg] Готов к работе
+09.10.2016 23:50:51 ROOT [Msg] TWI/SPI Adapter Atmega32U4
+10.10.2016 0:45:13 ROOT [Msg] Application startup
+10.10.2016 0:45:13 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Release\Bwl.Hardware.USB-I2C-SPI.App.exe
+10.10.2016 0:45:13 ROOT [Inf] Application executable date: 09.10.2016 23:49:37
+10.10.2016 0:45:13 ROOT [Msg] Готов к работе
+10.10.2016 0:45:38 ROOT [Msg] TWI/SPI Adapter Atmega32U4
+10.10.2016 0:49:05 ROOT [Msg] Обмен данными SPI...
+10.10.2016 0:49:06 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:09:12 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:09:18 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:09:18 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:09:35 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:09:35 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:09:55 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:09:58 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:10:09 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:10:10 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:10:11 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:10:12 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:10:14 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:10:14 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:10:14 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:10:14 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:10:15 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:10:15 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:10:15 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:10:15 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:10:15 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:16:39 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:16:40 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:17:23 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:17:26 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:17:27 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:17:28 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:17:46 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:17:47 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:17:47 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:17:48 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:18:33 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:18:34 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:22:31 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:22:33 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:22:46 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:22:49 ROOT [Msg] Обмен данными SPI...
+10.10.2016 1:58:54 ROOT [Msg] Application startup
+10.10.2016 1:58:54 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 1:58:54 ROOT [Inf] Application executable date: 10.10.2016 1:58:51
+10.10.2016 1:58:54 ROOT [Msg] Готов к работе
+10.10.2016 2:03:27 ROOT [Msg] Application startup
+10.10.2016 2:03:27 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 2:03:27 ROOT [Inf] Application executable date: 10.10.2016 2:03:26
+10.10.2016 2:03:27 ROOT [Msg] Готов к работе
+10.10.2016 2:13:24 ROOT [Msg] Application startup
+10.10.2016 2:13:24 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 2:13:24 ROOT [Inf] Application executable date: 10.10.2016 2:13:23
+10.10.2016 2:13:25 ROOT [Msg] Готов к работе
+10.10.2016 2:13:27 ROOT [Msg] TWI/SPI Adapter Atmega32U4
+10.10.2016 2:14:15 ROOT [Msg] SPI передача выполнена
+10.10.2016 2:23:18 ROOT [Msg] Application startup
+10.10.2016 2:23:18 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 2:23:18 ROOT [Inf] Application executable date: 10.10.2016 2:23:17
+10.10.2016 2:23:18 ROOT [Msg] Готов к работе
+10.10.2016 2:23:20 ROOT [Msg] TWI/SPI Adapter Atmega32U4
+10.10.2016 2:24:01 ROOT [Msg] Application startup
+10.10.2016 2:24:01 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 2:24:01 ROOT [Inf] Application executable date: 10.10.2016 2:24:00
+10.10.2016 2:24:01 ROOT [Msg] Готов к работе
+10.10.2016 2:25:36 ROOT [Msg] Application startup
+10.10.2016 2:25:36 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 2:25:36 ROOT [Inf] Application executable date: 10.10.2016 2:25:35
+10.10.2016 2:25:36 ROOT [Msg] Готов к работе
+10.10.2016 2:26:53 ROOT [Msg] Application startup
+10.10.2016 2:26:53 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 2:26:53 ROOT [Inf] Application executable date: 10.10.2016 2:25:35
+10.10.2016 2:26:54 ROOT [Msg] Готов к работе
+10.10.2016 2:27:02 ROOT [Msg] TWI/SPI Adapter Atmega32U4
+10.10.2016 2:27:16 ROOT [Msg] SPI передача выполнена
+10.10.2016 2:27:17 ROOT [Msg] SPI передача выполнена
+10.10.2016 2:27:18 ROOT [Msg] SPI передача выполнена
+10.10.2016 2:27:38 ROOT [Msg] Application startup
+10.10.2016 2:27:38 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 2:27:38 ROOT [Inf] Application executable date: 10.10.2016 2:27:37
+10.10.2016 2:27:38 ROOT [Msg] Готов к работе
+10.10.2016 2:27:51 ROOT [Msg] TWI/SPI Adapter Atmega32U4
+10.10.2016 2:27:52 ROOT [Msg] SPI передача выполнена
+10.10.2016 2:27:53 ROOT [Msg] SPI передача выполнена
+10.10.2016 2:27:54 ROOT [Msg] SPI передача выполнена
+10.10.2016 2:27:55 ROOT [Msg] SPI передача выполнена
+10.10.2016 2:33:04 ROOT [Msg] Application startup
+10.10.2016 2:33:04 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 2:33:04 ROOT [Inf] Application executable date: 10.10.2016 2:33:03
+10.10.2016 2:33:04 ROOT [Msg] Готов к работе
+10.10.2016 2:33:59 ROOT [Msg] Application startup
+10.10.2016 2:33:59 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 2:33:59 ROOT [Inf] Application executable date: 10.10.2016 2:33:58
+10.10.2016 2:33:59 ROOT [Msg] Готов к работе
+10.10.2016 2:34:01 ROOT [Msg] TWI/SPI Adapter Atmega32U4
+10.10.2016 2:34:15 ROOT [Msg] SPI передача выполнена
+10.10.2016 2:34:16 ROOT [Msg] SPI передача выполнена
+10.10.2016 2:34:18 ROOT [Msg] SPI передача выполнена
+10.10.2016 2:36:10 ROOT [Msg] Application startup
+10.10.2016 2:36:10 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 2:36:10 ROOT [Inf] Application executable date: 10.10.2016 2:36:09
+10.10.2016 2:36:10 ROOT [Msg] Готов к работе
+10.10.2016 2:36:13 ROOT [Msg] TWI/SPI Adapter Atmega32U4
+10.10.2016 2:37:10 ROOT [Msg] Application startup
+10.10.2016 2:37:10 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 2:37:10 ROOT [Inf] Application executable date: 10.10.2016 2:37:09
+10.10.2016 2:37:10 ROOT [Msg] Готов к работе
+10.10.2016 2:37:54 ROOT [Msg] Application startup
+10.10.2016 2:37:54 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 2:37:54 ROOT [Inf] Application executable date: 10.10.2016 2:37:09
+10.10.2016 2:37:55 ROOT [Msg] Готов к работе
+10.10.2016 2:38:20 ROOT [Msg] Application startup
+10.10.2016 2:38:20 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 2:38:20 ROOT [Inf] Application executable date: 10.10.2016 2:37:09
+10.10.2016 2:38:21 ROOT [Msg] Готов к работе
+10.10.2016 2:38:23 ROOT [Msg] TWI/SPI Adapter Atmega32U4
+10.10.2016 2:38:33 ROOT [Msg] SPI передача выполнена
+10.10.2016 2:38:34 ROOT [Msg] SPI передача выполнена
+10.10.2016 2:38:51 ROOT [Msg] SPI передача выполнена
+10.10.2016 2:38:52 ROOT [Msg] SPI передача выполнена
+10.10.2016 2:38:53 ROOT [Msg] SPI передача выполнена
+10.10.2016 2:38:54 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:10:41 ROOT [Msg] Application startup
+10.10.2016 3:10:41 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 3:10:41 ROOT [Inf] Application executable date: 10.10.2016 3:10:40
+10.10.2016 3:10:41 ROOT [Msg] Готов к работе
+10.10.2016 3:13:03 ROOT [Msg] Application startup
+10.10.2016 3:13:03 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 3:13:03 ROOT [Inf] Application executable date: 10.10.2016 3:13:02
+10.10.2016 3:13:03 ROOT [Msg] Готов к работе
+10.10.2016 3:13:43 ROOT [Msg] Application startup
+10.10.2016 3:13:43 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 3:13:43 ROOT [Inf] Application executable date: 10.10.2016 3:13:02
+10.10.2016 3:13:43 ROOT [Msg] Готов к работе
+10.10.2016 3:13:55 ROOT [Msg] TWI/SPI Adapter Atmega32U4
+10.10.2016 3:14:31 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:14:32 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:14:33 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:14:34 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:14:46 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:14:46 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:14:46 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:14:46 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:15:13 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:15:13 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:15:13 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:15:14 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:16:11 ROOT [Msg] Application startup
+10.10.2016 3:16:11 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 3:16:11 ROOT [Inf] Application executable date: 10.10.2016 3:13:02
+10.10.2016 3:16:11 ROOT [Msg] Готов к работе
+10.10.2016 3:16:15 ROOT [Msg] TWI/SPI Adapter Atmega32U4
+10.10.2016 3:17:52 ROOT [Msg] Application startup
+10.10.2016 3:17:52 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 3:17:52 ROOT [Inf] Application executable date: 10.10.2016 3:17:51
+10.10.2016 3:17:52 ROOT [Msg] Готов к работе
+10.10.2016 3:18:24 ROOT [Msg] TWI/SPI Adapter Atmega32U4
+10.10.2016 3:18:30 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:18:31 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:18:35 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:18:36 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:18:41 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:18:42 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:18:44 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:18:45 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:18:48 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:18:49 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:18:51 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:18:52 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:18:54 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:18:55 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:18:57 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:18:58 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:19:00 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:19:01 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:19:03 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:19:04 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:19:07 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:19:08 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:20:40 ROOT [Msg] Application startup
+10.10.2016 3:20:40 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 3:20:40 ROOT [Inf] Application executable date: 10.10.2016 3:20:39
+10.10.2016 3:20:40 ROOT [Msg] Готов к работе
+10.10.2016 3:20:52 ROOT [Msg] TWI/SPI Adapter Atmega32U4
+10.10.2016 3:21:03 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:21:04 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:21:07 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:21:07 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:21:10 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:21:11 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:21:14 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:21:14 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:28:46 ROOT [Msg] Application startup
+10.10.2016 3:28:46 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 3:28:46 ROOT [Inf] Application executable date: 10.10.2016 3:28:45
+10.10.2016 3:28:46 ROOT [Msg] Готов к работе
+10.10.2016 3:29:58 ROOT [Msg] Application startup
+10.10.2016 3:29:58 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 3:29:58 ROOT [Inf] Application executable date: 10.10.2016 3:28:45
+10.10.2016 3:29:58 ROOT [Msg] Готов к работе
+10.10.2016 3:30:20 ROOT [Msg] TWI/SPI Adapter Atmega32U4
+10.10.2016 3:30:27 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:27 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:27 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:29 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:29 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:29 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:30 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:30 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:30 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:32 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:32 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:32 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:33 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:33 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:33 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:35 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:35 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:35 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:36 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:36 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:36 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:38 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:38 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:38 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:39 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:39 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:39 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:41 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:41 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:41 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:42 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:42 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:30:43 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:32:22 ROOT [Msg] Application startup
+10.10.2016 3:32:22 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 3:32:22 ROOT [Inf] Application executable date: 10.10.2016 3:32:21
+10.10.2016 3:32:22 ROOT [Msg] Готов к работе
+10.10.2016 3:32:25 ROOT [Msg] TWI/SPI Adapter Atmega32U4
+10.10.2016 3:32:50 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:32:50 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:32:51 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:32:51 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:32:52 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:32:52 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:32:53 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:32:53 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:32:54 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:32:55 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:32:55 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:32:55 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:32:57 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:32:57 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:32:57 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:32:57 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:32:59 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:32:59 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:32:59 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:32:59 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:01 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:01 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:01 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:01 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:03 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:03 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:03 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:04 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:05 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:05 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:06 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:06 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:07 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:08 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:08 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:08 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:10 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:10 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:10 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:10 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:12 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:12 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:12 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:33:12 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:34:56 ROOT [Msg] Application startup
+10.10.2016 3:34:56 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 3:34:56 ROOT [Inf] Application executable date: 10.10.2016 3:32:21
+10.10.2016 3:34:56 ROOT [Msg] Готов к работе
+10.10.2016 3:35:21 ROOT [Msg] Application startup
+10.10.2016 3:35:21 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 3:35:21 ROOT [Inf] Application executable date: 10.10.2016 3:32:21
+10.10.2016 3:35:21 ROOT [Msg] Готов к работе
+10.10.2016 3:35:23 ROOT [Msg] TWI/SPI Adapter Atmega32U4
+10.10.2016 3:35:39 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:35:39 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:35:39 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:35:39 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:36:20 ROOT [Msg] Application startup
+10.10.2016 3:36:20 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 3:36:20 ROOT [Inf] Application executable date: 10.10.2016 3:36:19
+10.10.2016 3:36:20 ROOT [Msg] Готов к работе
+10.10.2016 3:36:38 ROOT [Msg] TWI/SPI Adapter Atmega32U4
+10.10.2016 3:36:40 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:36:40 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:36:40 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:36:40 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:36:40 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:36:41 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:36:41 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:36:41 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:36:41 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:36:42 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:36:42 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:36:42 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:11 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:11 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:11 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:11 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:11 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:12 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:12 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:12 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:12 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:12 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:13 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:13 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:13 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:13 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:13 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:14 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:14 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:14 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:14 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:15 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:16 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:16 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:16 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:16 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:16 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:17 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:17 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:17 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:17 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:17 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:18 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:18 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:18 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:18 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:18 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:19 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:19 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:19 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:19 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:19 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:20 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:20 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:20 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:20 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:21 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:22 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:22 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:22 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:22 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:22 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:23 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:23 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:23 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:23 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:23 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:24 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:24 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:24 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:24 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:24 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:25 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:25 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:26 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:26 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:26 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:27 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:27 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:27 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:27 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:27 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:28 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:28 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:28 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:28 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:28 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:29 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:29 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:29 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:29 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:29 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:31 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:31 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:31 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:31 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:31 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:32 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:32 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:32 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:32 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:32 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:33 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:33 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:33 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:33 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:33 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:34 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:34 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:34 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:35 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:35 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:36 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:36 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:36 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:36 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:36 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:37 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:37 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:37 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:37 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:37 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:38 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:38 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:38 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:38 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:38 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:40 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:40 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:40 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:40 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:40 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:41 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:41 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:41 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:41 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:41 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:42 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:42 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:42 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:42 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:42 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:43 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:44 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:44 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:44 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:44 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:45 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:45 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:45 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:45 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:45 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:46 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:46 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:46 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:46 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:46 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:48 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:48 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:48 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:48 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:48 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:49 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:49 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:49 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:49 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:49 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:50 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:50 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:50 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:50 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:50 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:51 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:51 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:52 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:52 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:52 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:53 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:53 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:53 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:53 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:53 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:54 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:54 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:54 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:54 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:54 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:55 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:55 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:55 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:56 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:56 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:57 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:57 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:57 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:57 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:57 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:58 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:58 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:58 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:58 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:58 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:59 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:59 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:45:59 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:00 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:00 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:01 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:01 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:01 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:01 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:01 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:02 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:02 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:02 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:02 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:02 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:03 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:03 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:03 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:03 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:04 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:05 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:05 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:05 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:05 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:05 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:06 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:06 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:06 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:06 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:06 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:07 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:07 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:07 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:07 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:07 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:08 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:08 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:09 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:09 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:09 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:10 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:10 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:10 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:10 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:10 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:11 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:11 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:11 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:11 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:11 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:12 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:12 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:12 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:12 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:12 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:14 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:14 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:14 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:14 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:14 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:15 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:15 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:15 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:15 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:15 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:16 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:16 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:16 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:17 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:17 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:18 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:18 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:18 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:18 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:18 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:19 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:19 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:19 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:19 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:19 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:20 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:20 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:20 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:20 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:20 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:22 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:22 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:22 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:22 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:22 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:23 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:23 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:23 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:23 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:23 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:24 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:24 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:24 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:24 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:24 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:25 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:26 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:26 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:26 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:26 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:27 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:27 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:27 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:27 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:27 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:28 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:28 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:28 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:28 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:28 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:29 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:30 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:30 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:30 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:30 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:31 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:31 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:31 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:31 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:31 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:32 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:32 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:32 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:32 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:32 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:33 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:33 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:34 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:34 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:34 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:35 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:35 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:35 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:35 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:35 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:36 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:36 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:36 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:36 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:36 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:37 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:37 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:37 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:38 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:38 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:39 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:39 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:39 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:39 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:39 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:40 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:40 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:40 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:40 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:40 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:41 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:41 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:42 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:42 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:42 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:43 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:43 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:43 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:43 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:43 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:44 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:44 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:44 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:44 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:44 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:45 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:45 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:45 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:46 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:46 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:47 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:47 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:47 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:47 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:47 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:48 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:48 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:48 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:48 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:48 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:49 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:50 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:50 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:50 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:50 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:51 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:51 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:51 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:51 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:51 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:52 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:52 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:52 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:52 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:52 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:53 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:54 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:54 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:54 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:54 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:55 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:56 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:56 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:56 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:56 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:57 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:57 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:58 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:58 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:58 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:59 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:46:59 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:00 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:00 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:00 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:01 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:01 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:01 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:01 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:02 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:03 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:03 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:03 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:03 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:03 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:05 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:05 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:05 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:05 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:05 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:07 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:07 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:07 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:07 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:07 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:09 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:09 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:09 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:09 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:09 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:10 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:11 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:11 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:11 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:11 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:12 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:13 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:13 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:13 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:13 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:14 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:14 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:15 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:15 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:15 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:16 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:16 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:17 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:17 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:17 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:18 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:18 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:18 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:19 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:19 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:20 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:20 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:20 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:21 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:21 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:22 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:22 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:22 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:22 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:23 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:24 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:24 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:24 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:24 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:25 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:26 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:26 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:26 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:26 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:26 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:28 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:28 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:28 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:28 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:28 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:30 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:30 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:30 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:30 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:30 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:31 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:32 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:32 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:32 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:32 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:33 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:34 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:34 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:34 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:47:34 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:03 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:03 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:03 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:03 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:03 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:05 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:05 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:05 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:05 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:05 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:07 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:07 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:07 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:07 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:08 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:10 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:10 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:10 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:10 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:10 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:12 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:12 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:12 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:12 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:12 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:14 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:14 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:14 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:14 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:15 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:17 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:17 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:17 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:17 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:17 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:19 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:19 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:19 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:19 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:19 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:21 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:21 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:21 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:21 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:21 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:23 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:23 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:23 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:23 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:24 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:26 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:26 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:26 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:26 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:26 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:28 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:28 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:28 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:28 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:28 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:30 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:30 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:30 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:30 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:30 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:32 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:32 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:32 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:33 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:33 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:35 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:35 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:35 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:35 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:35 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:37 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:37 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:37 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:37 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:37 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:39 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:39 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:39 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:39 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:40 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:42 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:42 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:42 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:42 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:42 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:44 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:44 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:44 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:44 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:50:44 ROOT [Msg] SPI передача выполнена
+10.10.2016 3:58:42 ROOT [Msg] Application startup
+10.10.2016 3:58:42 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 3:58:42 ROOT [Inf] Application executable date: 10.10.2016 3:58:40
+10.10.2016 3:58:46 ROOT [Msg] Готов к работе
+10.10.2016 4:00:56 ROOT [Msg] Application startup
+10.10.2016 4:00:56 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 4:00:56 ROOT [Inf] Application executable date: 10.10.2016 4:00:55
+10.10.2016 4:00:56 ROOT [Msg] Готов к работе
+10.10.2016 4:02:09 ROOT [Msg] Установите подключение к адаптеру!
+10.10.2016 4:02:14 ROOT [Msg] Установите подключение к адаптеру!
+10.10.2016 4:02:17 ROOT [Msg] Установите подключение к адаптеру!
+10.10.2016 4:03:11 ROOT [Msg] Application startup
+10.10.2016 4:03:11 ROOT [Inf] Application executable path: D:\work\hardware\Bwl.Hardware.USB-I2C-SPI\Debug\Bwl.Hardware.USB-I2C-SPI.App.EXE
+10.10.2016 4:03:11 ROOT [Inf] Application executable date: 10.10.2016 4:03:10
+10.10.2016 4:03:11 ROOT [Msg] Готов к работе
+10.10.2016 4:03:15 ROOT [Msg] Установите подключение к адаптеру!
+10.10.2016 4:03:20 ROOT [Msg] Установите подключение к адаптеру!
+10.10.2016 4:03:21 ROOT [Msg] Установите подключение к адаптеру!
+10.10.2016 4:03:22 ROOT [Msg] Установите подключение к адаптеру!
