@@ -10,10 +10,12 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         File.Delete("spi_log.txt")
+        File.Delete("i2c_log.txt")
         Dim ports As String() = SerialPort.GetPortNames()
         textSpiCycleCount.Text = "10"
         textSpiCycleDelay.Text = "1000"
         textSpiDelayCmd.Text = "100"
+        textI2CPeriod.Text = "500"
 
         For Each p As String In ports
             port_list.Items.Add(p)
@@ -29,9 +31,8 @@ Public Class Form1
         Dim addr As Byte = Convert.ToByte(dev_addr.Text, 16)
         Dim reg_addr As Byte = Convert.ToByte(rd_reg_addr.Text, 16)
         Dim resp As Byte = adp.ReadRegister(addr, reg_addr)
-        incom_data.Text = incom_data.Text + "val of 0x" + BitConverter.ToString(New Byte() {reg_addr}) + ": 0x" + BitConverter.ToString(New Byte() {resp}) + Environment.NewLine
-        incom_data.SelectionStart = incom_data.Text.Length
-        incom_data.ScrollToCaret()
+        singleValueBox.Text = BitConverter.ToString(New Byte() {resp})
+        _logger.AddMessage("REG 0x" + rd_reg_addr.Text + ": 0x" + singleValueBox.Text)
 
     End Sub
 
@@ -40,7 +41,10 @@ Public Class Form1
             adp = New Adapter(port_list.SelectedItem.ToString())
             bOpen.Text = "close"
             _logger.AddMessage(adp.GetDeviceInfo())
+
         ElseIf bOpen.Text.Equals("close") Then
+            bI2Cycles.Text = "GO!"
+            adp.Close()
             adp = Nothing
             bOpen.Text = "open"
             _logger.AddMessage("COM порт закрыт")
@@ -54,10 +58,11 @@ Public Class Form1
             Return
         End If
         Dim rg_addr As Byte = Convert.ToByte(wr_reg_addr.Text, 16)
+        rd_reg_addr.Text = wr_reg_addr.Text
         Dim rg_value As Byte = Convert.ToByte(reg_val.Text, 16)
         Dim addr As Byte = Convert.ToByte(dev_addr.Text, 16)
         adp.WriteRegister(addr, rg_addr, rg_value)
-        _logger.AddMessage("В регистр " + wr_reg_addr.Text + " записано " + reg_val.Text)
+        _logger.AddMessage("В регистр 0x" + wr_reg_addr.Text + " записано 0x" + reg_val.Text)
     End Sub
 
     Private Sub bRdSomeReg_Click(sender As Object, e As EventArgs) Handles bRdSomeReg.Click
@@ -69,10 +74,10 @@ Public Class Form1
         Dim count As Byte = Convert.ToByte(rd_cnt.Text, 16)
         Dim addr As Byte = Convert.ToByte(dev_addr.Text, 16)
         Dim resp = adp.ReadRegistersArray(addr, rg_addr, count)
-        incom_data.Text = incom_data.Text + "starting with 0x" + BitConverter.ToString(New Byte() {rg_addr}) + ": 0x" + BitConverter.ToString(resp).Replace("-", " 0x") + Environment.NewLine
+        incom_data.Text = incom_data.Text + "0x" + BitConverter.ToString(New Byte() {rg_addr}) + ": 0x" + BitConverter.ToString(resp).Replace("-", " 0x") + Environment.NewLine
         incom_data.SelectionStart = incom_data.Text.Length
         incom_data.ScrollToCaret()
-        _logger.AddMessage("Прочитано регистров: " + count)
+        _logger.AddMessage("Прочитано регистров: " + rd_cnt.Text)
     End Sub
 
     Private Sub bClear_Click(sender As Object, e As EventArgs) Handles bClear.Click
@@ -200,4 +205,86 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
+
+    End Sub
+
+    Private Sub TWIPeriodRequest()
+
+        Dim rg_addr As Byte = 0
+        Dim count As Byte = 0
+        Dim addr As Byte = 0
+        Dim reg_addr As Byte = 0
+
+        While bI2Cycles.Text.Contains("STOP") And bOpen.Text.Contains("close")
+            If rd_some_reg_addr.Text.Length > 0 Then
+                rg_addr = Convert.ToByte(rd_some_reg_addr.Text, 16)
+            End If
+            If rd_cnt.Text.Length > 0 Then
+                count = Convert.ToByte(rd_cnt.Text, 16)
+            End If
+            If dev_addr.Text.Length > 0 Then
+                addr = Convert.ToByte(dev_addr.Text, 16)
+            End If
+            If rd_reg_addr.Text.Length > 0 Then
+                reg_addr = Convert.ToByte(rd_reg_addr.Text, 16)
+            End If
+            If RadioSomeRegs.Checked Then
+                Dim resp = adp.ReadRegistersArray(addr, rg_addr, count)
+                Invoke(Sub()
+                           rd_reg_addr.Enabled = True
+                           rd_some_reg_addr.Enabled = False
+                           rd_cnt.Enabled = False
+                           incom_data.Text = incom_data.Text + "REG 0x" + BitConverter.ToString(New Byte() {rg_addr}) + ": 0x" + BitConverter.ToString(resp).Replace("-", " 0x") + Environment.NewLine
+                           incom_data.SelectionStart = incom_data.Text.Length
+                           incom_data.ScrollToCaret()
+                           _logger.AddMessage("Прочитано регистров: " + rd_cnt.Text)
+                           File.AppendAllText("i2c_log.txt", "REG 0x" + BitConverter.ToString(New Byte() {rg_addr}) + ": 0x" + BitConverter.ToString(resp).Replace("-", " 0x") + Environment.NewLine)
+                       End Sub)
+            End If
+            If RadioSingle.Checked Then
+                Dim resp As Byte = adp.ReadRegister(addr, reg_addr)
+                Invoke(Sub()
+                           rd_some_reg_addr.Enabled = True
+                           rd_cnt.Enabled = True
+                           rd_reg_addr.Enabled = False
+                           singleValueBox.Text = BitConverter.ToString(New Byte() {resp})
+                           incom_data.Text = incom_data.Text + "REG 0x" + rd_reg_addr.Text + ": 0x" + singleValueBox.Text + Environment.NewLine
+                           incom_data.SelectionStart = incom_data.Text.Length
+                           incom_data.ScrollToCaret()
+                           _logger.AddMessage("REG 0x" + rd_reg_addr.Text + ": 0x" + singleValueBox.Text)
+                           File.AppendAllText("i2c_log.txt", "REG 0x" + rd_reg_addr.Text + ": 0x" + singleValueBox.Text + Environment.NewLine)
+                       End Sub)
+            End If
+            Thread.Sleep(Convert.ToInt32(textI2CPeriod.Text))
+        End While
+        Invoke(Sub()
+                   rd_some_reg_addr.Enabled = True
+                   rd_cnt.Enabled = True
+                   rd_reg_addr.Enabled = True
+
+               End Sub)
+    End Sub
+
+    Private Sub bI2Cycles_Click(sender As Object, e As EventArgs) Handles bI2Cycles.Click
+        If adp Is Nothing Then
+            _logger.AddMessage("Установите подключение к адаптеру!")
+            Return
+        End If
+        If bI2Cycles.Text.Contains("STOP") Then
+            bI2Cycles.Text = "GO!"
+        ElseIf bI2Cycles.Text.Contains("GO") Then
+            bI2Cycles.Text = "STOP"
+            Dim twiThread = New Thread(AddressOf TWIPeriodRequest)
+            twiThread.Start()
+        End If
+    End Sub
+
+    Private Sub bTWIopenLog_Click(sender As Object, e As EventArgs) Handles bTWIopenLog.Click
+        If File.Exists("i2c_log.txt") Then
+            Process.Start("i2c_log.txt")
+        Else
+            _logger.AddMessage("Лог файл I2C отсутсвует")
+        End If
+    End Sub
 End Class

@@ -5,8 +5,10 @@
 #include "bwl_simplserial.h"
 #include "bwl_i2c.h"
 #include "spi.h"
+#include <util/delay.h>
 
-#define WR 0x00
+#define F_CPU 48000000
+#define WR 0xFE
 #define RD 0x01
 #define DEV_NAME "TWI/SPI Adapter Atmega32U4"
 
@@ -69,8 +71,8 @@ void uart_send(unsigned char var, unsigned char data){
 void i2c_init(void)
 {
 	PORTD |= (1<<0)|(1<<1);
-	TWSR = 0x01;
-	TWBR = 0x3A;
+	TWSR = 0x00;
+	TWBR = 232;
 }
 
 void sserial_send_start(){}
@@ -82,11 +84,11 @@ void sserial_process_request()
 	//read single register from slave
 	if (sserial_request.command==1)
 	{
-		char dev_addr = sserial_request.data[0]*2;
+		char dev_addr = sserial_request.data[0];
 		char regiser  = sserial_request.data[1];
 		char resp = 0;
 	    i2c_start();
-		i2c_write_byte(dev_addr|WR);
+		i2c_write_byte(dev_addr&WR);
 		i2c_write_byte(regiser);
 		i2c_start();
 		i2c_write_byte(dev_addr|RD);
@@ -100,12 +102,12 @@ void sserial_process_request()
 
 	//write single register to slave
 	if (sserial_request.command==2){
-		char dev_addr = sserial_request.data[0]*2;
+		char dev_addr = sserial_request.data[0];
 		char regiser  = sserial_request.data[1];
 		char register_value = sserial_request.data[2];
 
 		i2c_start();
-		i2c_write_byte(dev_addr|WR);
+		i2c_write_byte(dev_addr&WR);
 		i2c_write_byte(regiser);
 		i2c_write_byte(register_value);
 		i2c_stop();
@@ -116,12 +118,12 @@ void sserial_process_request()
 
 	//read array from slave device
 	if (sserial_request.command==3){
-		char dev_addr = sserial_request.data[0]*2;
+		char dev_addr = sserial_request.data[0];
 		char regiser  = sserial_request.data[1];
 		char count = sserial_request.data[2];
 		int i = 0;
 		i2c_start();
-		i2c_write_byte(dev_addr|WR);
+		i2c_write_byte(dev_addr&WR);
 		i2c_write_byte(regiser);
 		i2c_start();
 		i2c_write_byte(dev_addr|RD);
@@ -168,14 +170,7 @@ void rfm69_writereg(byte addr, byte value)
 	spi_unselect();
 }
 
-byte rfm69_readreg(byte addr)
-{
-	spi_select();
-	spi_read(addr & 0x7F);
-	byte regval = spi_read(0);
-	spi_unselect();
-	return regval;
-}
+
 
 int main (void)
 {
@@ -188,7 +183,7 @@ int main (void)
 	i2c_init();
 	spi_init();
 	while(1){
-		sserial_poll_uart(0);
+		sserial_poll_uart(0);		
 		CDC_Device_USBTask(&VirtualSerial_CDC_Interface);
 		USB_USBTask();	
 	}

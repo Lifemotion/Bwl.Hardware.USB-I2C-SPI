@@ -4,10 +4,13 @@ Public Class Adapter
 
 
     Public Sub New(port As String)
-
         _port.SerialDevice.DeviceAddress = port
         _port.SerialDevice.DeviceSpeed = 9600
         _port.Connect()
+    End Sub
+
+    Public Sub Close()
+        _port.Disconnect()
     End Sub
 
     Public Function ReadRegister(deviсe_addr As Byte, addr As Byte) As Byte

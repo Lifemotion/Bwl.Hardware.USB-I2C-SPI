@@ -10,30 +10,37 @@
 
 void i2c_wait()
 {
-	volatile char i=0;
+	unsigned char i=0;
 	while ((!(TWCR & (1 << TWINT)))&(i<250)){i++;}
 }
 
 void i2c_start() {
+	TWCR = 0;
 	TWCR = (1 << TWINT) | (1 << TWSTA) | (1 << TWEN);
 	i2c_wait();
+	while((TWSR & 0xF8)!= 0x08); 
 }
 
 void i2c_write_byte(char byte) {
-	TWDR = byte;
-	TWCR = (1 << TWINT) | (1 << TWEN);
-	i2c_wait();
+	TWDR=byte;
+	TWCR=(1<<TWINT)|(1<<TWEN);
+	unsigned char i=0;
+	while ((!(TWCR & (1 << TWINT)))&(i<250)){i++;}
+	i=0;
+	while(((TWSR & 0xF8) != 0x28)&(i<250)){i++;}
 }
 
 char i2c_read_byte() {
 	TWCR = (1 << TWINT) | (1 << TWEA) | (1 << TWEN);
-	i2c_wait();
+	while (!(TWCR & (1<<TWINT))); // Wait till complete TWDR byte transmitted
+	while((TWSR & 0xF8) != 0x50);
 	return TWDR;
 }
 
 char i2c_read_last_byte() {
-	TWCR = (1 << TWINT) | (1 << TWEN);
-	i2c_wait();
+	TWCR=(1<<TWINT)|(1<<TWEN);    // Clear TWI interrupt flag,Enable TWI
+	while (!(TWCR & (1<<TWINT))); // Wait till complete TWDR byte transmitted
+	while((TWSR & 0xF8) != 0x58);
 	return TWDR;
 }
 
