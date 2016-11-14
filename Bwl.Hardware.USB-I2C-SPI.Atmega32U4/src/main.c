@@ -7,7 +7,7 @@
 #include "spi.h"
 #include <util/delay.h>
 
-#define F_CPU 48000000
+//#define F_CPU 48000000
 #define WR 0xFE
 #define RD 0x01
 #define DEV_NAME "TWI/SPI Adapter Atmega32U4"
@@ -138,7 +138,7 @@ void sserial_process_request()
 	}
 
 	if(sserial_request.command==4){
-		char i = 0;
+		byte i = 0;
 		sserial_response.datalength = sserial_request.datalength;
 		spi_select();
 		for(i=0;i<sserial_request.datalength;i++){
@@ -161,16 +161,6 @@ void sserial_process_request()
 		sserial_send_response();
 	}
 }
-
-void rfm69_writereg(byte addr, byte value)
-{
-	spi_select();
-	spi_read(addr | 0x80);
-	spi_read(value);
-	spi_unselect();
-}
-
-
 
 int main (void)
 {

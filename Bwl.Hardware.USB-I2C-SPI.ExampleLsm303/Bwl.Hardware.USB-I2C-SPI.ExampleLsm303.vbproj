@@ -4,13 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D67710D7-A8F1-4435-A288-75A1FA9D75B0}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <StartupObject>Bwl.Hardware.USB_I2C_SPI.App.My.MyApplication</StartupObject>
-    <RootNamespace>Bwl.Hardware.USB_I2C_SPI.App</RootNamespace>
-    <AssemblyName>Bwl.Hardware.USB-I2C-SPI.App</AssemblyName>
+    <ProjectGuid>{CFE58D41-8473-421A-AA2B-581A123F7ADB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <StartupObject>Bwl.Hardware.USB_I2C_SPI.ExampleLsm303.LSM303Example</StartupObject>
+    <RootNamespace>Bwl.Hardware.USB_I2C_SPI.ExampleLsm303</RootNamespace>
+    <AssemblyName>Bwl.Hardware.USB-I2C-SPI.ExampleLsm303</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>Console</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -19,8 +19,8 @@
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
-    <OutputPath>..\debug\Bwl USB-I2C-SPI\bin\</OutputPath>
-    <DocumentationFile>Bwl.Hardware.USB-I2C-SPI.App.xml</DocumentationFile>
+    <OutputPath>..\debug\examples\LSM 303\</OutputPath>
+    <DocumentationFile>Bwl.Hardware.USB-I2C-SPI.ExampleLsm303.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -29,8 +29,8 @@
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
-    <OutputPath>..\release\Bwl USB-I2C-SPI\bin\</OutputPath>
-    <DocumentationFile>Bwl.Hardware.USB-I2C-SPI.App.xml</DocumentationFile>
+    <OutputPath>..\release\examples\LSM 303\</OutputPath>
+    <DocumentationFile>Bwl.Hardware.USB-I2C-SPI.ExampleLsm303.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -46,32 +46,19 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bwl.Framework">
-      <HintPath>..\refs\Bwl.Framework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
-    <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
-    <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bwl.Hardware.USB-I2C-SPI.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Bwl.Hardware.USB-I2C-SPI.Designer.vb">
-      <DependentUpon>Bwl.Hardware.USB-I2C-SPI.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="LSM303Example.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -89,9 +76,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Bwl.Hardware.USB-I2C-SPI.resx">
-      <DependentUpon>Bwl.Hardware.USB-I2C-SPI.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>

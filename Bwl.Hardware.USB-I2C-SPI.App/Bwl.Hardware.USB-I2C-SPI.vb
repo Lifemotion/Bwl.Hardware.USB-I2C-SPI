@@ -6,7 +6,7 @@ Imports Bwl.Framework
 Public Class Form1
     Inherits FormAppBase
 
-    Private adp = Nothing
+    Private adp As UsbSpiTwiAdapter = Nothing
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         File.Delete("spi_log.txt")
@@ -30,25 +30,30 @@ Public Class Form1
         End If
         Dim addr As Byte = Convert.ToByte(dev_addr.Text, 16)
         Dim reg_addr As Byte = Convert.ToByte(rd_reg_addr.Text, 16)
-        Dim resp As Byte = adp.ReadRegister(addr, reg_addr)
+        Dim resp As Byte = adp.TwiReadRegister(addr, reg_addr)
         singleValueBox.Text = BitConverter.ToString(New Byte() {resp})
         _logger.AddMessage("REG 0x" + rd_reg_addr.Text + ": 0x" + singleValueBox.Text)
-
     End Sub
 
     Private Sub bOpen_Click(sender As Object, e As EventArgs) Handles bOpen.Click
-        If bOpen.Text.Equals("open") Then
-            adp = New Adapter(port_list.SelectedItem.ToString())
-            bOpen.Text = "close"
-            _logger.AddMessage(adp.GetDeviceInfo())
+        If adp Is Nothing Then
+            Try
 
-        ElseIf bOpen.Text.Equals("close") Then
+                adp = New UsbSpiTwiAdapter(port_list.SelectedItem.ToString())
+                adp.Open()
+                _logger.AddMessage(adp.GetAdapterName())
+                bOpen.Text = "close"
+            Catch ex As Exception
+                _logger.AddError(ex.Message)
+                adp = Nothing
+            End Try
+        Else
             bI2Cycles.Text = "GO!"
-            adp.Close()
-            adp = Nothing
-            bOpen.Text = "open"
-            _logger.AddMessage("COM порт закрыт")
-        End If
+                adp.Close()
+                adp = Nothing
+                bOpen.Text = "open"
+                _logger.AddMessage("COM порт закрыт")
+            End If
         bOpen.Refresh()
     End Sub
 
@@ -61,7 +66,7 @@ Public Class Form1
         rd_reg_addr.Text = wr_reg_addr.Text
         Dim rg_value As Byte = Convert.ToByte(reg_val.Text, 16)
         Dim addr As Byte = Convert.ToByte(dev_addr.Text, 16)
-        adp.WriteRegister(addr, rg_addr, rg_value)
+        adp.TwiWriteRegister(addr, rg_addr, rg_value)
         _logger.AddMessage("В регистр 0x" + wr_reg_addr.Text + " записано 0x" + reg_val.Text)
     End Sub
 
@@ -73,7 +78,7 @@ Public Class Form1
         Dim rg_addr As Byte = Convert.ToByte(rd_some_reg_addr.Text, 16)
         Dim count As Byte = Convert.ToByte(rd_cnt.Text, 16)
         Dim addr As Byte = Convert.ToByte(dev_addr.Text, 16)
-        Dim resp = adp.ReadRegistersArray(addr, rg_addr, count)
+        Dim resp = adp.TwiReadRegistersArray(addr, rg_addr, count)
         incom_data.Text = incom_data.Text + "0x" + BitConverter.ToString(New Byte() {rg_addr}) + ": 0x" + BitConverter.ToString(resp).Replace("-", " 0x") + Environment.NewLine
         incom_data.SelectionStart = incom_data.Text.Length
         incom_data.ScrollToCaret()
@@ -122,7 +127,8 @@ Public Class Form1
 
     Public Sub SpiCycleProcess()
         Dim cycleCount As Integer = CInt(textSpiCycleCount.Text)
-        For i As Integer = cycleCount To 0 Step -1
+        For k As Integer = cycleCount To 0 Step -1
+            Dim i = k
             SpiCmd()
             Invoke(Sub() textSpiCycleCount.Text = i)
             Invoke(Sub()
@@ -230,7 +236,7 @@ Public Class Form1
                 reg_addr = Convert.ToByte(rd_reg_addr.Text, 16)
             End If
             If RadioSomeRegs.Checked Then
-                Dim resp = adp.ReadRegistersArray(addr, rg_addr, count)
+                Dim resp = adp.TwiReadRegistersArray(addr, rg_addr, count)
                 Invoke(Sub()
                            rd_reg_addr.Enabled = True
                            rd_some_reg_addr.Enabled = False
@@ -243,7 +249,7 @@ Public Class Form1
                        End Sub)
             End If
             If RadioSingle.Checked Then
-                Dim resp As Byte = adp.ReadRegister(addr, reg_addr)
+                Dim resp As Byte = adp.TwiReadRegister(addr, reg_addr)
                 Invoke(Sub()
                            rd_some_reg_addr.Enabled = True
                            rd_cnt.Enabled = True

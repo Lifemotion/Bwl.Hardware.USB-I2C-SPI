@@ -26,78 +26,78 @@ Partial Class Form1
         Me.port_list = New System.Windows.Forms.ComboBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.groupBox3 = New System.Windows.Forms.GroupBox()
-        Me.label6 = New System.Windows.Forms.Label()
-        Me.rd_reg_addr = New System.Windows.Forms.TextBox()
-        Me.bRdReg = New System.Windows.Forms.Button()
-        Me.singleValueBox = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.groupBox2 = New System.Windows.Forms.GroupBox()
-        Me.label5 = New System.Windows.Forms.Label()
-        Me.label4 = New System.Windows.Forms.Label()
-        Me.rd_cnt = New System.Windows.Forms.TextBox()
-        Me.rd_some_reg_addr = New System.Windows.Forms.TextBox()
-        Me.bRdSomeReg = New System.Windows.Forms.Button()
-        Me.groupBox1 = New System.Windows.Forms.GroupBox()
-        Me.label3 = New System.Windows.Forms.Label()
-        Me.label2 = New System.Windows.Forms.Label()
-        Me.reg_val = New System.Windows.Forms.TextBox()
-        Me.wr_reg_addr = New System.Windows.Forms.TextBox()
-        Me.write_reg = New System.Windows.Forms.Button()
-        Me.label1 = New System.Windows.Forms.Label()
-        Me.dev_addr = New System.Windows.Forms.TextBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
-        Me.bClear = New System.Windows.Forms.Button()
-        Me.incom_data = New System.Windows.Forms.TextBox()
-        Me.GroupBox9 = New System.Windows.Forms.GroupBox()
-        Me.RadioSingle = New System.Windows.Forms.RadioButton()
-        Me.RadioSomeRegs = New System.Windows.Forms.RadioButton()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.textI2CPeriod = New System.Windows.Forms.TextBox()
-        Me.bI2Cycles = New System.Windows.Forms.Button()
         Me.bTWIopenLog = New System.Windows.Forms.Button()
+        Me.bI2Cycles = New System.Windows.Forms.Button()
+        Me.textI2CPeriod = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.GroupBox9 = New System.Windows.Forms.GroupBox()
+        Me.RadioSomeRegs = New System.Windows.Forms.RadioButton()
+        Me.RadioSingle = New System.Windows.Forms.RadioButton()
+        Me.incom_data = New System.Windows.Forms.TextBox()
+        Me.bClear = New System.Windows.Forms.Button()
+        Me.dev_addr = New System.Windows.Forms.TextBox()
+        Me.label1 = New System.Windows.Forms.Label()
+        Me.groupBox1 = New System.Windows.Forms.GroupBox()
+        Me.write_reg = New System.Windows.Forms.Button()
+        Me.wr_reg_addr = New System.Windows.Forms.TextBox()
+        Me.reg_val = New System.Windows.Forms.TextBox()
+        Me.label2 = New System.Windows.Forms.Label()
+        Me.label3 = New System.Windows.Forms.Label()
+        Me.groupBox2 = New System.Windows.Forms.GroupBox()
+        Me.bRdSomeReg = New System.Windows.Forms.Button()
+        Me.rd_some_reg_addr = New System.Windows.Forms.TextBox()
+        Me.rd_cnt = New System.Windows.Forms.TextBox()
+        Me.label4 = New System.Windows.Forms.Label()
+        Me.label5 = New System.Windows.Forms.Label()
+        Me.groupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.singleValueBox = New System.Windows.Forms.TextBox()
+        Me.bRdReg = New System.Windows.Forms.Button()
+        Me.rd_reg_addr = New System.Windows.Forms.TextBox()
+        Me.label6 = New System.Windows.Forms.Label()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.SPI_data_to_write = New System.Windows.Forms.TextBox()
-        Me.spi_incom_data = New System.Windows.Forms.TextBox()
-        Me.bSPI_Read = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.textSpiDelayCmd = New System.Windows.Forms.TextBox()
-        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.textSpiCycleCount = New System.Windows.Forms.TextBox()
-        Me.textSpiCycleDelay = New System.Windows.Forms.TextBox()
-        Me.bSpiCycleStart = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.bSpiCycleStart = New System.Windows.Forms.Button()
+        Me.textSpiCycleDelay = New System.Windows.Forms.TextBox()
+        Me.textSpiCycleCount = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.textSpiDelayCmd = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.bSPI_Read = New System.Windows.Forms.Button()
+        Me.spi_incom_data = New System.Windows.Forms.TextBox()
+        Me.SPI_data_to_write = New System.Windows.Forms.TextBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
-        Me.groupBox3.SuspendLayout()
-        Me.groupBox2.SuspendLayout()
-        Me.groupBox1.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         Me.GroupBox9.SuspendLayout()
+        Me.groupBox1.SuspendLayout()
+        Me.groupBox2.SuspendLayout()
+        Me.groupBox3.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        Me.GroupBox4.SuspendLayout()
-        Me.GroupBox6.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.SuspendLayout()
         '
         'logWriter
         '
+        Me.logWriter.ExtendedView = False
         Me.logWriter.Location = New System.Drawing.Point(0, 363)
         Me.logWriter.Size = New System.Drawing.Size(708, 149)
         '
         'bScan
         '
-        Me.bScan.Font = New System.Drawing.Font("Consolas", 9.0!)
         Me.bScan.Location = New System.Drawing.Point(619, 108)
         Me.bScan.Name = "bScan"
         Me.bScan.Size = New System.Drawing.Size(77, 23)
@@ -107,7 +107,6 @@ Partial Class Form1
         '
         'bOpen
         '
-        Me.bOpen.Font = New System.Drawing.Font("Consolas", 9.0!)
         Me.bOpen.Location = New System.Drawing.Point(619, 76)
         Me.bOpen.Name = "bOpen"
         Me.bOpen.Size = New System.Drawing.Size(77, 23)
@@ -117,11 +116,10 @@ Partial Class Form1
         '
         'port_list
         '
-        Me.port_list.Font = New System.Drawing.Font("Consolas", 9.0!)
         Me.port_list.FormattingEnabled = True
         Me.port_list.Location = New System.Drawing.Point(619, 49)
         Me.port_list.Name = "port_list"
-        Me.port_list.Size = New System.Drawing.Size(77, 22)
+        Me.port_list.Size = New System.Drawing.Size(77, 21)
         Me.port_list.TabIndex = 28
         '
         'TabPage2
@@ -150,200 +148,6 @@ Partial Class Form1
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "I2C"
         '
-        'groupBox3
-        '
-        Me.groupBox3.Controls.Add(Me.Label13)
-        Me.groupBox3.Controls.Add(Me.singleValueBox)
-        Me.groupBox3.Controls.Add(Me.bRdReg)
-        Me.groupBox3.Controls.Add(Me.rd_reg_addr)
-        Me.groupBox3.Controls.Add(Me.label6)
-        Me.groupBox3.Location = New System.Drawing.Point(222, 53)
-        Me.groupBox3.Name = "groupBox3"
-        Me.groupBox3.Size = New System.Drawing.Size(147, 69)
-        Me.groupBox3.TabIndex = 21
-        Me.groupBox3.TabStop = False
-        Me.groupBox3.Text = "Чтение регистра"
-        '
-        'label6
-        '
-        Me.label6.AutoSize = True
-        Me.label6.Location = New System.Drawing.Point(13, 20)
-        Me.label6.Name = "label6"
-        Me.label6.Size = New System.Drawing.Size(30, 13)
-        Me.label6.TabIndex = 7
-        Me.label6.Text = "REG"
-        '
-        'rd_reg_addr
-        '
-        Me.rd_reg_addr.Location = New System.Drawing.Point(8, 36)
-        Me.rd_reg_addr.Name = "rd_reg_addr"
-        Me.rd_reg_addr.Size = New System.Drawing.Size(39, 20)
-        Me.rd_reg_addr.TabIndex = 5
-        Me.rd_reg_addr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'bRdReg
-        '
-        Me.bRdReg.Font = New System.Drawing.Font("Consolas", 9.0!)
-        Me.bRdReg.Location = New System.Drawing.Point(53, 34)
-        Me.bRdReg.Name = "bRdReg"
-        Me.bRdReg.Size = New System.Drawing.Size(40, 23)
-        Me.bRdReg.TabIndex = 10
-        Me.bRdReg.Text = "RD"
-        Me.bRdReg.UseVisualStyleBackColor = True
-        '
-        'singleValueBox
-        '
-        Me.singleValueBox.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.singleValueBox.Enabled = False
-        Me.singleValueBox.Location = New System.Drawing.Point(99, 35)
-        Me.singleValueBox.Name = "singleValueBox"
-        Me.singleValueBox.Size = New System.Drawing.Size(39, 20)
-        Me.singleValueBox.TabIndex = 11
-        Me.singleValueBox.Text = "00"
-        Me.singleValueBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(96, 20)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(36, 13)
-        Me.Label13.TabIndex = 11
-        Me.Label13.Text = "   VAL"
-        '
-        'groupBox2
-        '
-        Me.groupBox2.Controls.Add(Me.bRdSomeReg)
-        Me.groupBox2.Controls.Add(Me.rd_some_reg_addr)
-        Me.groupBox2.Controls.Add(Me.rd_cnt)
-        Me.groupBox2.Controls.Add(Me.label4)
-        Me.groupBox2.Controls.Add(Me.label5)
-        Me.groupBox2.Location = New System.Drawing.Point(399, 53)
-        Me.groupBox2.Name = "groupBox2"
-        Me.groupBox2.Size = New System.Drawing.Size(153, 69)
-        Me.groupBox2.TabIndex = 22
-        Me.groupBox2.TabStop = False
-        Me.groupBox2.Text = "Чтение массива"
-        '
-        'label5
-        '
-        Me.label5.AutoSize = True
-        Me.label5.Location = New System.Drawing.Point(59, 20)
-        Me.label5.Name = "label5"
-        Me.label5.Size = New System.Drawing.Size(29, 13)
-        Me.label5.TabIndex = 8
-        Me.label5.Text = "CNT"
-        '
-        'label4
-        '
-        Me.label4.AutoSize = True
-        Me.label4.Location = New System.Drawing.Point(13, 20)
-        Me.label4.Name = "label4"
-        Me.label4.Size = New System.Drawing.Size(30, 13)
-        Me.label4.TabIndex = 7
-        Me.label4.Text = "REG"
-        '
-        'rd_cnt
-        '
-        Me.rd_cnt.Location = New System.Drawing.Point(53, 36)
-        Me.rd_cnt.Name = "rd_cnt"
-        Me.rd_cnt.Size = New System.Drawing.Size(39, 20)
-        Me.rd_cnt.TabIndex = 9
-        Me.rd_cnt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'rd_some_reg_addr
-        '
-        Me.rd_some_reg_addr.Location = New System.Drawing.Point(8, 36)
-        Me.rd_some_reg_addr.Name = "rd_some_reg_addr"
-        Me.rd_some_reg_addr.Size = New System.Drawing.Size(39, 20)
-        Me.rd_some_reg_addr.TabIndex = 5
-        Me.rd_some_reg_addr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'bRdSomeReg
-        '
-        Me.bRdSomeReg.Font = New System.Drawing.Font("Consolas", 9.0!)
-        Me.bRdSomeReg.Location = New System.Drawing.Point(98, 34)
-        Me.bRdSomeReg.Name = "bRdSomeReg"
-        Me.bRdSomeReg.Size = New System.Drawing.Size(40, 23)
-        Me.bRdSomeReg.TabIndex = 10
-        Me.bRdSomeReg.Text = "RD"
-        Me.bRdSomeReg.UseVisualStyleBackColor = True
-        '
-        'groupBox1
-        '
-        Me.groupBox1.Controls.Add(Me.write_reg)
-        Me.groupBox1.Controls.Add(Me.wr_reg_addr)
-        Me.groupBox1.Controls.Add(Me.reg_val)
-        Me.groupBox1.Controls.Add(Me.label2)
-        Me.groupBox1.Controls.Add(Me.label3)
-        Me.groupBox1.Location = New System.Drawing.Point(34, 53)
-        Me.groupBox1.Name = "groupBox1"
-        Me.groupBox1.Size = New System.Drawing.Size(153, 69)
-        Me.groupBox1.TabIndex = 20
-        Me.groupBox1.TabStop = False
-        Me.groupBox1.Text = "Запись регистра"
-        '
-        'label3
-        '
-        Me.label3.AutoSize = True
-        Me.label3.Location = New System.Drawing.Point(59, 20)
-        Me.label3.Name = "label3"
-        Me.label3.Size = New System.Drawing.Size(27, 13)
-        Me.label3.TabIndex = 8
-        Me.label3.Text = "VAL"
-        '
-        'label2
-        '
-        Me.label2.AutoSize = True
-        Me.label2.Location = New System.Drawing.Point(13, 20)
-        Me.label2.Name = "label2"
-        Me.label2.Size = New System.Drawing.Size(30, 13)
-        Me.label2.TabIndex = 7
-        Me.label2.Text = "REG"
-        '
-        'reg_val
-        '
-        Me.reg_val.Location = New System.Drawing.Point(53, 36)
-        Me.reg_val.Name = "reg_val"
-        Me.reg_val.Size = New System.Drawing.Size(39, 20)
-        Me.reg_val.TabIndex = 9
-        Me.reg_val.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'wr_reg_addr
-        '
-        Me.wr_reg_addr.Location = New System.Drawing.Point(8, 36)
-        Me.wr_reg_addr.Name = "wr_reg_addr"
-        Me.wr_reg_addr.Size = New System.Drawing.Size(39, 20)
-        Me.wr_reg_addr.TabIndex = 5
-        Me.wr_reg_addr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'write_reg
-        '
-        Me.write_reg.Font = New System.Drawing.Font("Consolas", 9.0!)
-        Me.write_reg.Location = New System.Drawing.Point(98, 34)
-        Me.write_reg.Name = "write_reg"
-        Me.write_reg.Size = New System.Drawing.Size(40, 23)
-        Me.write_reg.TabIndex = 10
-        Me.write_reg.Text = "WR"
-        Me.write_reg.UseVisualStyleBackColor = True
-        '
-        'label1
-        '
-        Me.label1.AutoSize = True
-        Me.label1.Location = New System.Drawing.Point(87, 32)
-        Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(63, 13)
-        Me.label1.TabIndex = 19
-        Me.label1.Text = "DEV ADDR"
-        '
-        'dev_addr
-        '
-        Me.dev_addr.Location = New System.Drawing.Point(45, 29)
-        Me.dev_addr.Name = "dev_addr"
-        Me.dev_addr.Size = New System.Drawing.Size(36, 20)
-        Me.dev_addr.TabIndex = 18
-        Me.dev_addr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'GroupBox8
         '
         Me.GroupBox8.Controls.Add(Me.bTWIopenLog)
@@ -360,24 +164,39 @@ Partial Class Form1
         Me.GroupBox8.TabStop = False
         Me.GroupBox8.Text = "Чтение данных"
         '
-        'bClear
+        'bTWIopenLog
         '
-        Me.bClear.Font = New System.Drawing.Font("Consolas", 9.0!)
-        Me.bClear.Location = New System.Drawing.Point(6, 127)
-        Me.bClear.Name = "bClear"
-        Me.bClear.Size = New System.Drawing.Size(329, 23)
-        Me.bClear.TabIndex = 24
-        Me.bClear.Text = "Очистить"
-        Me.bClear.UseVisualStyleBackColor = True
+        Me.bTWIopenLog.Location = New System.Drawing.Point(428, 126)
+        Me.bTWIopenLog.Name = "bTWIopenLog"
+        Me.bTWIopenLog.Size = New System.Drawing.Size(75, 23)
+        Me.bTWIopenLog.TabIndex = 30
+        Me.bTWIopenLog.Text = "I2C  лог"
+        Me.bTWIopenLog.UseVisualStyleBackColor = True
         '
-        'incom_data
+        'bI2Cycles
         '
-        Me.incom_data.Location = New System.Drawing.Point(6, 19)
-        Me.incom_data.Multiline = True
-        Me.incom_data.Name = "incom_data"
-        Me.incom_data.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.incom_data.Size = New System.Drawing.Size(329, 102)
-        Me.incom_data.TabIndex = 23
+        Me.bI2Cycles.Location = New System.Drawing.Point(341, 126)
+        Me.bI2Cycles.Name = "bI2Cycles"
+        Me.bI2Cycles.Size = New System.Drawing.Size(77, 23)
+        Me.bI2Cycles.TabIndex = 29
+        Me.bI2Cycles.Text = "GO!"
+        Me.bI2Cycles.UseVisualStyleBackColor = True
+        '
+        'textI2CPeriod
+        '
+        Me.textI2CPeriod.Location = New System.Drawing.Point(424, 94)
+        Me.textI2CPeriod.Name = "textI2CPeriod"
+        Me.textI2CPeriod.Size = New System.Drawing.Size(78, 20)
+        Me.textI2CPeriod.TabIndex = 28
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(344, 97)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(74, 13)
+        Me.Label14.TabIndex = 27
+        Me.Label14.Text = "Период в мс:"
         '
         'GroupBox9
         '
@@ -389,6 +208,16 @@ Partial Class Form1
         Me.GroupBox9.TabIndex = 26
         Me.GroupBox9.TabStop = False
         Me.GroupBox9.Text = "Источник"
+        '
+        'RadioSomeRegs
+        '
+        Me.RadioSomeRegs.AutoSize = True
+        Me.RadioSomeRegs.Location = New System.Drawing.Point(6, 42)
+        Me.RadioSomeRegs.Name = "RadioSomeRegs"
+        Me.RadioSomeRegs.Size = New System.Drawing.Size(109, 17)
+        Me.RadioSomeRegs.TabIndex = 26
+        Me.RadioSomeRegs.Text = "Чтение массива"
+        Me.RadioSomeRegs.UseVisualStyleBackColor = True
         '
         'RadioSingle
         '
@@ -402,49 +231,217 @@ Partial Class Form1
         Me.RadioSingle.Text = "Чтение регистра"
         Me.RadioSingle.UseVisualStyleBackColor = True
         '
-        'RadioSomeRegs
+        'incom_data
         '
-        Me.RadioSomeRegs.AutoSize = True
-        Me.RadioSomeRegs.Location = New System.Drawing.Point(6, 42)
-        Me.RadioSomeRegs.Name = "RadioSomeRegs"
-        Me.RadioSomeRegs.Size = New System.Drawing.Size(109, 17)
-        Me.RadioSomeRegs.TabIndex = 26
-        Me.RadioSomeRegs.Text = "Чтение массива"
-        Me.RadioSomeRegs.UseVisualStyleBackColor = True
+        Me.incom_data.Location = New System.Drawing.Point(6, 19)
+        Me.incom_data.Multiline = True
+        Me.incom_data.Name = "incom_data"
+        Me.incom_data.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.incom_data.Size = New System.Drawing.Size(329, 102)
+        Me.incom_data.TabIndex = 23
         '
-        'Label14
+        'bClear
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(344, 97)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(74, 13)
-        Me.Label14.TabIndex = 27
-        Me.Label14.Text = "Период в мс:"
+        Me.bClear.Location = New System.Drawing.Point(6, 127)
+        Me.bClear.Name = "bClear"
+        Me.bClear.Size = New System.Drawing.Size(329, 23)
+        Me.bClear.TabIndex = 24
+        Me.bClear.Text = "Очистить"
+        Me.bClear.UseVisualStyleBackColor = True
         '
-        'textI2CPeriod
+        'dev_addr
         '
-        Me.textI2CPeriod.Location = New System.Drawing.Point(424, 94)
-        Me.textI2CPeriod.Name = "textI2CPeriod"
-        Me.textI2CPeriod.Size = New System.Drawing.Size(78, 20)
-        Me.textI2CPeriod.TabIndex = 28
+        Me.dev_addr.Location = New System.Drawing.Point(45, 29)
+        Me.dev_addr.Name = "dev_addr"
+        Me.dev_addr.Size = New System.Drawing.Size(36, 20)
+        Me.dev_addr.TabIndex = 18
+        Me.dev_addr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'bI2Cycles
+        'label1
         '
-        Me.bI2Cycles.Location = New System.Drawing.Point(341, 126)
-        Me.bI2Cycles.Name = "bI2Cycles"
-        Me.bI2Cycles.Size = New System.Drawing.Size(77, 23)
-        Me.bI2Cycles.TabIndex = 29
-        Me.bI2Cycles.Text = "GO!"
-        Me.bI2Cycles.UseVisualStyleBackColor = True
+        Me.label1.AutoSize = True
+        Me.label1.Location = New System.Drawing.Point(87, 32)
+        Me.label1.Name = "label1"
+        Me.label1.Size = New System.Drawing.Size(63, 13)
+        Me.label1.TabIndex = 19
+        Me.label1.Text = "DEV ADDR"
         '
-        'bTWIopenLog
+        'groupBox1
         '
-        Me.bTWIopenLog.Location = New System.Drawing.Point(428, 126)
-        Me.bTWIopenLog.Name = "bTWIopenLog"
-        Me.bTWIopenLog.Size = New System.Drawing.Size(75, 23)
-        Me.bTWIopenLog.TabIndex = 30
-        Me.bTWIopenLog.Text = "I2C  лог"
-        Me.bTWIopenLog.UseVisualStyleBackColor = True
+        Me.groupBox1.Controls.Add(Me.write_reg)
+        Me.groupBox1.Controls.Add(Me.wr_reg_addr)
+        Me.groupBox1.Controls.Add(Me.reg_val)
+        Me.groupBox1.Controls.Add(Me.label2)
+        Me.groupBox1.Controls.Add(Me.label3)
+        Me.groupBox1.Location = New System.Drawing.Point(34, 53)
+        Me.groupBox1.Name = "groupBox1"
+        Me.groupBox1.Size = New System.Drawing.Size(153, 69)
+        Me.groupBox1.TabIndex = 20
+        Me.groupBox1.TabStop = False
+        Me.groupBox1.Text = "Запись регистра"
+        '
+        'write_reg
+        '
+        Me.write_reg.Font = New System.Drawing.Font("Consolas", 9.0!)
+        Me.write_reg.Location = New System.Drawing.Point(98, 34)
+        Me.write_reg.Name = "write_reg"
+        Me.write_reg.Size = New System.Drawing.Size(40, 23)
+        Me.write_reg.TabIndex = 10
+        Me.write_reg.Text = "WR"
+        Me.write_reg.UseVisualStyleBackColor = True
+        '
+        'wr_reg_addr
+        '
+        Me.wr_reg_addr.Location = New System.Drawing.Point(8, 36)
+        Me.wr_reg_addr.Name = "wr_reg_addr"
+        Me.wr_reg_addr.Size = New System.Drawing.Size(39, 20)
+        Me.wr_reg_addr.TabIndex = 5
+        Me.wr_reg_addr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'reg_val
+        '
+        Me.reg_val.Location = New System.Drawing.Point(53, 36)
+        Me.reg_val.Name = "reg_val"
+        Me.reg_val.Size = New System.Drawing.Size(39, 20)
+        Me.reg_val.TabIndex = 9
+        Me.reg_val.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'label2
+        '
+        Me.label2.AutoSize = True
+        Me.label2.Location = New System.Drawing.Point(13, 20)
+        Me.label2.Name = "label2"
+        Me.label2.Size = New System.Drawing.Size(30, 13)
+        Me.label2.TabIndex = 7
+        Me.label2.Text = "REG"
+        '
+        'label3
+        '
+        Me.label3.AutoSize = True
+        Me.label3.Location = New System.Drawing.Point(59, 20)
+        Me.label3.Name = "label3"
+        Me.label3.Size = New System.Drawing.Size(27, 13)
+        Me.label3.TabIndex = 8
+        Me.label3.Text = "VAL"
+        '
+        'groupBox2
+        '
+        Me.groupBox2.Controls.Add(Me.bRdSomeReg)
+        Me.groupBox2.Controls.Add(Me.rd_some_reg_addr)
+        Me.groupBox2.Controls.Add(Me.rd_cnt)
+        Me.groupBox2.Controls.Add(Me.label4)
+        Me.groupBox2.Controls.Add(Me.label5)
+        Me.groupBox2.Location = New System.Drawing.Point(399, 53)
+        Me.groupBox2.Name = "groupBox2"
+        Me.groupBox2.Size = New System.Drawing.Size(153, 69)
+        Me.groupBox2.TabIndex = 22
+        Me.groupBox2.TabStop = False
+        Me.groupBox2.Text = "Чтение массива"
+        '
+        'bRdSomeReg
+        '
+        Me.bRdSomeReg.Font = New System.Drawing.Font("Consolas", 9.0!)
+        Me.bRdSomeReg.Location = New System.Drawing.Point(98, 34)
+        Me.bRdSomeReg.Name = "bRdSomeReg"
+        Me.bRdSomeReg.Size = New System.Drawing.Size(40, 23)
+        Me.bRdSomeReg.TabIndex = 10
+        Me.bRdSomeReg.Text = "RD"
+        Me.bRdSomeReg.UseVisualStyleBackColor = True
+        '
+        'rd_some_reg_addr
+        '
+        Me.rd_some_reg_addr.Location = New System.Drawing.Point(8, 36)
+        Me.rd_some_reg_addr.Name = "rd_some_reg_addr"
+        Me.rd_some_reg_addr.Size = New System.Drawing.Size(39, 20)
+        Me.rd_some_reg_addr.TabIndex = 5
+        Me.rd_some_reg_addr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'rd_cnt
+        '
+        Me.rd_cnt.Location = New System.Drawing.Point(53, 36)
+        Me.rd_cnt.Name = "rd_cnt"
+        Me.rd_cnt.Size = New System.Drawing.Size(39, 20)
+        Me.rd_cnt.TabIndex = 9
+        Me.rd_cnt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'label4
+        '
+        Me.label4.AutoSize = True
+        Me.label4.Location = New System.Drawing.Point(13, 20)
+        Me.label4.Name = "label4"
+        Me.label4.Size = New System.Drawing.Size(30, 13)
+        Me.label4.TabIndex = 7
+        Me.label4.Text = "REG"
+        '
+        'label5
+        '
+        Me.label5.AutoSize = True
+        Me.label5.Location = New System.Drawing.Point(59, 20)
+        Me.label5.Name = "label5"
+        Me.label5.Size = New System.Drawing.Size(29, 13)
+        Me.label5.TabIndex = 8
+        Me.label5.Text = "CNT"
+        '
+        'groupBox3
+        '
+        Me.groupBox3.Controls.Add(Me.Label13)
+        Me.groupBox3.Controls.Add(Me.singleValueBox)
+        Me.groupBox3.Controls.Add(Me.bRdReg)
+        Me.groupBox3.Controls.Add(Me.rd_reg_addr)
+        Me.groupBox3.Controls.Add(Me.label6)
+        Me.groupBox3.Location = New System.Drawing.Point(222, 53)
+        Me.groupBox3.Name = "groupBox3"
+        Me.groupBox3.Size = New System.Drawing.Size(147, 69)
+        Me.groupBox3.TabIndex = 21
+        Me.groupBox3.TabStop = False
+        Me.groupBox3.Text = "Чтение регистра"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(96, 20)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(36, 13)
+        Me.Label13.TabIndex = 11
+        Me.Label13.Text = "   VAL"
+        '
+        'singleValueBox
+        '
+        Me.singleValueBox.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.singleValueBox.Enabled = False
+        Me.singleValueBox.Location = New System.Drawing.Point(99, 35)
+        Me.singleValueBox.Name = "singleValueBox"
+        Me.singleValueBox.Size = New System.Drawing.Size(39, 20)
+        Me.singleValueBox.TabIndex = 11
+        Me.singleValueBox.Text = "00"
+        Me.singleValueBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'bRdReg
+        '
+        Me.bRdReg.Font = New System.Drawing.Font("Consolas", 9.0!)
+        Me.bRdReg.Location = New System.Drawing.Point(53, 34)
+        Me.bRdReg.Name = "bRdReg"
+        Me.bRdReg.Size = New System.Drawing.Size(40, 23)
+        Me.bRdReg.TabIndex = 10
+        Me.bRdReg.Text = "RD"
+        Me.bRdReg.UseVisualStyleBackColor = True
+        '
+        'rd_reg_addr
+        '
+        Me.rd_reg_addr.Location = New System.Drawing.Point(8, 36)
+        Me.rd_reg_addr.Name = "rd_reg_addr"
+        Me.rd_reg_addr.Size = New System.Drawing.Size(39, 20)
+        Me.rd_reg_addr.TabIndex = 5
+        Me.rd_reg_addr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'label6
+        '
+        Me.label6.AutoSize = True
+        Me.label6.Location = New System.Drawing.Point(13, 20)
+        Me.label6.Name = "label6"
+        Me.label6.Size = New System.Drawing.Size(30, 13)
+        Me.label6.TabIndex = 7
+        Me.label6.Text = "REG"
         '
         'TabPage1
         '
@@ -460,121 +457,14 @@ Partial Class Form1
         Me.TabPage1.Text = "SPI адаптер"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'GroupBox4
+        'Button2
         '
-        Me.GroupBox4.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.GroupBox4.Controls.Add(Me.Button1)
-        Me.GroupBox4.Controls.Add(Me.bSPI_Read)
-        Me.GroupBox4.Controls.Add(Me.spi_incom_data)
-        Me.GroupBox4.Controls.Add(Me.SPI_data_to_write)
-        Me.GroupBox4.Location = New System.Drawing.Point(6, 4)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(309, 297)
-        Me.GroupBox4.TabIndex = 31
-        Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "SPI"
-        '
-        'SPI_data_to_write
-        '
-        Me.SPI_data_to_write.Font = New System.Drawing.Font("Consolas", 9.0!)
-        Me.SPI_data_to_write.Location = New System.Drawing.Point(15, 19)
-        Me.SPI_data_to_write.Multiline = True
-        Me.SPI_data_to_write.Name = "SPI_data_to_write"
-        Me.SPI_data_to_write.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.SPI_data_to_write.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.SPI_data_to_write.Size = New System.Drawing.Size(288, 101)
-        Me.SPI_data_to_write.TabIndex = 0
-        '
-        'spi_incom_data
-        '
-        Me.spi_incom_data.Font = New System.Drawing.Font("Consolas", 9.0!)
-        Me.spi_incom_data.Location = New System.Drawing.Point(15, 128)
-        Me.spi_incom_data.Multiline = True
-        Me.spi_incom_data.Name = "spi_incom_data"
-        Me.spi_incom_data.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.spi_incom_data.Size = New System.Drawing.Size(288, 126)
-        Me.spi_incom_data.TabIndex = 2
-        '
-        'bSPI_Read
-        '
-        Me.bSPI_Read.Cursor = System.Windows.Forms.Cursors.Default
-        Me.bSPI_Read.FlatAppearance.BorderColor = System.Drawing.Color.Blue
-        Me.bSPI_Read.Font = New System.Drawing.Font("Consolas", 9.0!)
-        Me.bSPI_Read.Location = New System.Drawing.Point(15, 259)
-        Me.bSPI_Read.Name = "bSPI_Read"
-        Me.bSPI_Read.Size = New System.Drawing.Size(221, 23)
-        Me.bSPI_Read.TabIndex = 3
-        Me.bSPI_Read.Text = "READ/WRITE"
-        Me.bSPI_Read.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Consolas", 9.0!)
-        Me.Button1.Location = New System.Drawing.Point(242, 259)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(61, 23)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Clear"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'GroupBox6
-        '
-        Me.GroupBox6.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.GroupBox6.Controls.Add(Me.textSpiDelayCmd)
-        Me.GroupBox6.Controls.Add(Me.Label10)
-        Me.GroupBox6.Controls.Add(Me.Label9)
-        Me.GroupBox6.Controls.Add(Me.Label8)
-        Me.GroupBox6.Controls.Add(Me.Label7)
-        Me.GroupBox6.Location = New System.Drawing.Point(322, 7)
-        Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(277, 117)
-        Me.GroupBox6.TabIndex = 32
-        Me.GroupBox6.TabStop = False
-        Me.GroupBox6.Text = "Задержки"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(6, 24)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(242, 13)
-        Me.Label7.TabIndex = 0
-        Me.Label7.Text = "Использование "";"" в последовательноси байт"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(6, 37)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(271, 13)
-        Me.Label8.TabIndex = 1
-        Me.Label8.Text = "позволяет выполнить раздельную отправку данных"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(6, 50)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(131, 13)
-        Me.Label9.TabIndex = 2
-        Me.Label9.Text = "с указанной задержкой:"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(6, 84)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(167, 13)
-        Me.Label10.TabIndex = 3
-        Me.Label10.Text = "Пауза между передачами в мс:"
-        '
-        'textSpiDelayCmd
-        '
-        Me.textSpiDelayCmd.Font = New System.Drawing.Font("Consolas", 9.0!)
-        Me.textSpiDelayCmd.Location = New System.Drawing.Point(191, 81)
-        Me.textSpiDelayCmd.Name = "textSpiDelayCmd"
-        Me.textSpiDelayCmd.Size = New System.Drawing.Size(80, 22)
-        Me.textSpiDelayCmd.TabIndex = 4
+        Me.Button2.Location = New System.Drawing.Point(322, 262)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(277, 23)
+        Me.Button2.TabIndex = 34
+        Me.Button2.Text = "Открыть лог SPI"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'GroupBox7
         '
@@ -591,14 +481,28 @@ Partial Class Form1
         Me.GroupBox7.TabStop = False
         Me.GroupBox7.Text = "Циклическая отправка"
         '
-        'Label11
+        'bSpiCycleStart
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(6, 31)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(119, 13)
-        Me.Label11.TabIndex = 0
-        Me.Label11.Text = "Количество повторов:"
+        Me.bSpiCycleStart.Location = New System.Drawing.Point(9, 85)
+        Me.bSpiCycleStart.Name = "bSpiCycleStart"
+        Me.bSpiCycleStart.Size = New System.Drawing.Size(264, 23)
+        Me.bSpiCycleStart.TabIndex = 4
+        Me.bSpiCycleStart.Text = "GO!"
+        Me.bSpiCycleStart.UseVisualStyleBackColor = True
+        '
+        'textSpiCycleDelay
+        '
+        Me.textSpiCycleDelay.Location = New System.Drawing.Point(191, 59)
+        Me.textSpiCycleDelay.Name = "textSpiCycleDelay"
+        Me.textSpiCycleDelay.Size = New System.Drawing.Size(80, 20)
+        Me.textSpiCycleDelay.TabIndex = 3
+        '
+        'textSpiCycleCount
+        '
+        Me.textSpiCycleCount.Location = New System.Drawing.Point(191, 28)
+        Me.textSpiCycleCount.Name = "textSpiCycleCount"
+        Me.textSpiCycleCount.Size = New System.Drawing.Size(80, 20)
+        Me.textSpiCycleCount.TabIndex = 2
         '
         'Label12
         '
@@ -609,41 +513,127 @@ Partial Class Form1
         Me.Label12.TabIndex = 1
         Me.Label12.Text = "Задержка между повторами в мс:"
         '
-        'textSpiCycleCount
+        'Label11
         '
-        Me.textSpiCycleCount.Font = New System.Drawing.Font("Consolas", 9.0!)
-        Me.textSpiCycleCount.Location = New System.Drawing.Point(191, 28)
-        Me.textSpiCycleCount.Name = "textSpiCycleCount"
-        Me.textSpiCycleCount.Size = New System.Drawing.Size(80, 22)
-        Me.textSpiCycleCount.TabIndex = 2
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(6, 31)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(119, 13)
+        Me.Label11.TabIndex = 0
+        Me.Label11.Text = "Количество повторов:"
         '
-        'textSpiCycleDelay
+        'GroupBox6
         '
-        Me.textSpiCycleDelay.Font = New System.Drawing.Font("Consolas", 9.0!)
-        Me.textSpiCycleDelay.Location = New System.Drawing.Point(191, 59)
-        Me.textSpiCycleDelay.Name = "textSpiCycleDelay"
-        Me.textSpiCycleDelay.Size = New System.Drawing.Size(80, 22)
-        Me.textSpiCycleDelay.TabIndex = 3
+        Me.GroupBox6.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.GroupBox6.Controls.Add(Me.textSpiDelayCmd)
+        Me.GroupBox6.Controls.Add(Me.Label10)
+        Me.GroupBox6.Controls.Add(Me.Label9)
+        Me.GroupBox6.Controls.Add(Me.Label8)
+        Me.GroupBox6.Controls.Add(Me.Label7)
+        Me.GroupBox6.Location = New System.Drawing.Point(322, 7)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(277, 117)
+        Me.GroupBox6.TabIndex = 32
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "Задержки"
         '
-        'bSpiCycleStart
+        'textSpiDelayCmd
         '
-        Me.bSpiCycleStart.Font = New System.Drawing.Font("Consolas", 9.0!)
-        Me.bSpiCycleStart.Location = New System.Drawing.Point(9, 85)
-        Me.bSpiCycleStart.Name = "bSpiCycleStart"
-        Me.bSpiCycleStart.Size = New System.Drawing.Size(264, 23)
-        Me.bSpiCycleStart.TabIndex = 4
-        Me.bSpiCycleStart.Text = "GO!"
-        Me.bSpiCycleStart.UseVisualStyleBackColor = True
+        Me.textSpiDelayCmd.Location = New System.Drawing.Point(191, 81)
+        Me.textSpiDelayCmd.Name = "textSpiDelayCmd"
+        Me.textSpiDelayCmd.Size = New System.Drawing.Size(80, 20)
+        Me.textSpiDelayCmd.TabIndex = 4
         '
-        'Button2
+        'Label10
         '
-        Me.Button2.Font = New System.Drawing.Font("Consolas", 9.0!)
-        Me.Button2.Location = New System.Drawing.Point(322, 262)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(277, 23)
-        Me.Button2.TabIndex = 34
-        Me.Button2.Text = "Открыть лог SPI"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(6, 84)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(167, 13)
+        Me.Label10.TabIndex = 3
+        Me.Label10.Text = "Пауза между передачами в мс:"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(6, 50)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(131, 13)
+        Me.Label9.TabIndex = 2
+        Me.Label9.Text = "с указанной задержкой:"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(6, 37)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(271, 13)
+        Me.Label8.TabIndex = 1
+        Me.Label8.Text = "позволяет выполнить раздельную отправку данных"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(6, 24)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(242, 13)
+        Me.Label7.TabIndex = 0
+        Me.Label7.Text = "Использование "";"" в последовательноси байт"
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.GroupBox4.Controls.Add(Me.Button1)
+        Me.GroupBox4.Controls.Add(Me.bSPI_Read)
+        Me.GroupBox4.Controls.Add(Me.spi_incom_data)
+        Me.GroupBox4.Controls.Add(Me.SPI_data_to_write)
+        Me.GroupBox4.Location = New System.Drawing.Point(6, 4)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(309, 297)
+        Me.GroupBox4.TabIndex = 31
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "SPI"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(242, 259)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(61, 23)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Clear"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'bSPI_Read
+        '
+        Me.bSPI_Read.Cursor = System.Windows.Forms.Cursors.Default
+        Me.bSPI_Read.FlatAppearance.BorderColor = System.Drawing.Color.Blue
+        Me.bSPI_Read.Location = New System.Drawing.Point(15, 259)
+        Me.bSPI_Read.Name = "bSPI_Read"
+        Me.bSPI_Read.Size = New System.Drawing.Size(221, 23)
+        Me.bSPI_Read.TabIndex = 3
+        Me.bSPI_Read.Text = "READ/WRITE"
+        Me.bSPI_Read.UseVisualStyleBackColor = True
+        '
+        'spi_incom_data
+        '
+        Me.spi_incom_data.Font = New System.Drawing.Font("Consolas", 9.0!)
+        Me.spi_incom_data.Location = New System.Drawing.Point(15, 128)
+        Me.spi_incom_data.Multiline = True
+        Me.spi_incom_data.Name = "spi_incom_data"
+        Me.spi_incom_data.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.spi_incom_data.Size = New System.Drawing.Size(288, 126)
+        Me.spi_incom_data.TabIndex = 2
+        '
+        'SPI_data_to_write
+        '
+        Me.SPI_data_to_write.Font = New System.Drawing.Font("Consolas", 9.0!)
+        Me.SPI_data_to_write.Location = New System.Drawing.Point(15, 19)
+        Me.SPI_data_to_write.Multiline = True
+        Me.SPI_data_to_write.Name = "SPI_data_to_write"
+        Me.SPI_data_to_write.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.SPI_data_to_write.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.SPI_data_to_write.Size = New System.Drawing.Size(288, 101)
+        Me.SPI_data_to_write.TabIndex = 0
         '
         'TabControl1
         '
@@ -665,6 +655,8 @@ Partial Class Form1
         Me.Controls.Add(Me.bScan)
         Me.Controls.Add(Me.bOpen)
         Me.Controls.Add(Me.port_list)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.Text = "TWI/SPI Adaper 1.0"
         Me.Controls.SetChildIndex(Me.port_list, 0)
@@ -675,23 +667,23 @@ Partial Class Form1
         Me.TabPage2.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
-        Me.groupBox3.ResumeLayout(False)
-        Me.groupBox3.PerformLayout()
-        Me.groupBox2.ResumeLayout(False)
-        Me.groupBox2.PerformLayout()
-        Me.groupBox1.ResumeLayout(False)
-        Me.groupBox1.PerformLayout()
         Me.GroupBox8.ResumeLayout(False)
         Me.GroupBox8.PerformLayout()
         Me.GroupBox9.ResumeLayout(False)
         Me.GroupBox9.PerformLayout()
+        Me.groupBox1.ResumeLayout(False)
+        Me.groupBox1.PerformLayout()
+        Me.groupBox2.ResumeLayout(False)
+        Me.groupBox2.PerformLayout()
+        Me.groupBox3.ResumeLayout(False)
+        Me.groupBox3.PerformLayout()
         Me.TabPage1.ResumeLayout(False)
-        Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox4.PerformLayout()
-        Me.GroupBox6.ResumeLayout(False)
-        Me.GroupBox6.PerformLayout()
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox7.PerformLayout()
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()

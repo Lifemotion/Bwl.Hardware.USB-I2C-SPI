@@ -7,6 +7,7 @@
  * Version: 01.07.2016
  */ 
 #include <avr/io.h>
+#include "bwl_i2c.h"
 
 void i2c_wait()
 {

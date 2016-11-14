@@ -4,33 +4,30 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D67710D7-A8F1-4435-A288-75A1FA9D75B0}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <StartupObject>Bwl.Hardware.USB_I2C_SPI.App.My.MyApplication</StartupObject>
-    <RootNamespace>Bwl.Hardware.USB_I2C_SPI.App</RootNamespace>
-    <AssemblyName>Bwl.Hardware.USB-I2C-SPI.App</AssemblyName>
+    <ProjectGuid>{1BA8A88C-F501-46E1-B6DA-89FCD27F0B6B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Bwl.Hardware.USB_I2C_SPI</RootNamespace>
+    <AssemblyName>Bwl.Hardware.USB-I2C-SPI.Lib</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
-    <OutputPath>..\debug\Bwl USB-I2C-SPI\bin\</OutputPath>
-    <DocumentationFile>Bwl.Hardware.USB-I2C-SPI.App.xml</DocumentationFile>
+    <OutputPath>..\debug\bwl-usb-i2c-spi\</OutputPath>
+    <DocumentationFile>Bwl.Hardware.USB-I2C-SPI.Lib.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
-    <OutputPath>..\release\Bwl USB-I2C-SPI\bin\</OutputPath>
-    <DocumentationFile>Bwl.Hardware.USB-I2C-SPI.App.xml</DocumentationFile>
+    <OutputPath>..\release\bwl-usb-i2c-spi\</OutputPath>
+    <DocumentationFile>Bwl.Hardware.USB-I2C-SPI.Lib.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -49,29 +46,25 @@
     <Reference Include="Bwl.Framework">
       <HintPath>..\refs\Bwl.Framework.dll</HintPath>
     </Reference>
+    <Reference Include="Bwl.Hardware.Serial">
+      <HintPath>..\refs\Bwl.Hardware.Serial.dll</HintPath>
+    </Reference>
+    <Reference Include="Bwl.Hardware.SimplSerial">
+      <HintPath>..\refs\Bwl.Hardware.SimplSerial.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
-    <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
-    <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bwl.Hardware.USB-I2C-SPI.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Bwl.Hardware.USB-I2C-SPI.Designer.vb">
-      <DependentUpon>Bwl.Hardware.USB-I2C-SPI.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="UsbSpiTwiAdapter.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -89,9 +82,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Bwl.Hardware.USB-I2C-SPI.resx">
-      <DependentUpon>Bwl.Hardware.USB-I2C-SPI.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -109,12 +99,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Bwl.Hardware.USB-I2C-SPI.Lib\Bwl.Hardware.USB-I2C-SPI.Lib.vbproj">
-      <Project>{1ba8a88c-f501-46e1-b6da-89fcd27f0b6b}</Project>
-      <Name>Bwl.Hardware.USB-I2C-SPI.Lib</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
