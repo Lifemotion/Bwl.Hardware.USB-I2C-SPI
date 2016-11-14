@@ -1,8 +1,15 @@
 ﻿Imports Bwl.Hardware.SimplSerial
 
+''' <summary>
+''' Класс, представляет подключенный USB-TWI-SPI адаптер.
+''' </summary>
 Public Class UsbSpiTwiAdapter
     Private _ss As New SimplSerialBus()
 
+    ''' <summary>
+    ''' Конструктор.
+    ''' </summary>
+    ''' <param name="port">Имя последовательного порта, например COM1</param>
     Public Sub New(port As String)
         _ss.SerialDevice.DeviceAddress = port
         _ss.SerialDevice.DeviceSpeed = 9600
@@ -16,10 +23,16 @@ Public Class UsbSpiTwiAdapter
         _ss.Disconnect()
     End Sub
 
-    Public Function TwiReadRegister(deviсe_addr As Byte, addr As Byte) As Byte
+    ''' <summary>
+    ''' Записать регистр по интерфейсу I2C (TWI).
+    ''' </summary>
+    ''' <param name="deviсe_addr">Адрес устройства на шине I2C</param>
+    ''' <param name="reg_addr">Адрес регистра устройства.</param>
+    ''' <returns>Значение прочитанного регистра.</returns>
+    Public Function TwiReadRegister(deviсe_addr As Byte, reg_addr As Byte) As Byte
         Dim args(1) As Byte
         args(0) = deviсe_addr
-        args(1) = addr
+        args(1) = reg_addr
         Dim resp = _ss.Request(0, 1, args)
         Return resp.Data(0)
     End Function
