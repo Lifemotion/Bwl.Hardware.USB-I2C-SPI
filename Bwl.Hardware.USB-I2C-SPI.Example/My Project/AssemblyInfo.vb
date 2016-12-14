@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Проверьте значения атрибутов сборки
 
-<Assembly: AssemblyTitle("Bwl.Hardware.USB-I2C-SPI.ExampleLsm303")>
+<Assembly: AssemblyTitle("Bwl.Hardware.USB-I2C-SPI.Example")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("Bwl.Hardware.USB-I2C-SPI.ExampleLsm303")>
+<Assembly: AssemblyProduct("Bwl.Hardware.USB-I2C-SPI.Example")>
 <Assembly: AssemblyCopyright("Copyright ©  2016")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 
 'Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-<Assembly: Guid("e9b5bc13-dc47-45fb-bf8f-e81ebbc5b8ac")>
+<Assembly: Guid("e4aee294-c24b-4a3c-b893-ad5cf42d20d1")>
 
 ' Сведения о версии сборки состоят из следующих четырех значений:
 '

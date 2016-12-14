@@ -21,9 +21,6 @@ Partial Class Form1
     'Не изменяйте ее в редакторе исходного кода.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.bScan = New System.Windows.Forms.Button()
-        Me.bOpen = New System.Windows.Forms.Button()
-        Me.port_list = New System.Windows.Forms.ComboBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
@@ -94,33 +91,7 @@ Partial Class Form1
         '
         Me.logWriter.ExtendedView = False
         Me.logWriter.Location = New System.Drawing.Point(0, 363)
-        Me.logWriter.Size = New System.Drawing.Size(708, 149)
-        '
-        'bScan
-        '
-        Me.bScan.Location = New System.Drawing.Point(619, 108)
-        Me.bScan.Name = "bScan"
-        Me.bScan.Size = New System.Drawing.Size(77, 23)
-        Me.bScan.TabIndex = 30
-        Me.bScan.Text = "scan"
-        Me.bScan.UseVisualStyleBackColor = True
-        '
-        'bOpen
-        '
-        Me.bOpen.Location = New System.Drawing.Point(619, 76)
-        Me.bOpen.Name = "bOpen"
-        Me.bOpen.Size = New System.Drawing.Size(77, 23)
-        Me.bOpen.TabIndex = 29
-        Me.bOpen.Text = "open"
-        Me.bOpen.UseVisualStyleBackColor = True
-        '
-        'port_list
-        '
-        Me.port_list.FormattingEnabled = True
-        Me.port_list.Location = New System.Drawing.Point(619, 49)
-        Me.port_list.Name = "port_list"
-        Me.port_list.Size = New System.Drawing.Size(77, 21)
-        Me.port_list.TabIndex = 28
+        Me.logWriter.Size = New System.Drawing.Size(620, 149)
         '
         'TabPage2
         '
@@ -650,18 +621,12 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(708, 512)
+        Me.ClientSize = New System.Drawing.Size(620, 512)
         Me.Controls.Add(Me.TabControl1)
-        Me.Controls.Add(Me.bScan)
-        Me.Controls.Add(Me.bOpen)
-        Me.Controls.Add(Me.port_list)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.Text = "TWI/SPI Adaper 1.0"
-        Me.Controls.SetChildIndex(Me.port_list, 0)
-        Me.Controls.SetChildIndex(Me.bOpen, 0)
-        Me.Controls.SetChildIndex(Me.bScan, 0)
         Me.Controls.SetChildIndex(Me.TabControl1, 0)
         Me.Controls.SetChildIndex(Me.logWriter, 0)
         Me.TabPage2.ResumeLayout(False)
@@ -689,9 +654,6 @@ Partial Class Form1
         Me.PerformLayout()
 
     End Sub
-    Private WithEvents bScan As Button
-    Private WithEvents bOpen As Button
-    Private WithEvents port_list As ComboBox
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents GroupBox8 As GroupBox

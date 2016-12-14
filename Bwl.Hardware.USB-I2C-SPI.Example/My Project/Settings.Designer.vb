@@ -64,9 +64,9 @@ Namespace My
     Friend Module MySettingsProperty
 
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")> _
-        Friend ReadOnly Property Settings() As Global.Bwl.Hardware.USB_I2C_SPI.ExampleLsm303.My.MySettings
+        Friend ReadOnly Property Settings() As Global.Bwl.Hardware.USB_I2C_SPI.Example.My.MySettings
             Get
-                Return Global.Bwl.Hardware.USB_I2C_SPI.ExampleLsm303.My.MySettings.Default
+                Return Global.Bwl.Hardware.USB_I2C_SPI.Example.My.MySettings.Default
             End Get
         End Property
     End Module

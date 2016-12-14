@@ -1,0 +1,5 @@
+Bwl.Hardware.USB-I2C-SPI
+Igor Koshelev (igor@lifemotion.ru) 
+Gusev Nickolay (gusev_tech@mail.ru)
+
+USB to TWI/SPI adapter based on arduino mini.

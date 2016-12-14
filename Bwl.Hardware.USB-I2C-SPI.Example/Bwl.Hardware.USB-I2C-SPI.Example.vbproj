@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CFE58D41-8473-421A-AA2B-581A123F7ADB}</ProjectGuid>
+    <ProjectGuid>{E381A512-B3DE-4DE9-8609-5AECBAC3606E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>Bwl.Hardware.USB_I2C_SPI.ExampleLsm303.LSM303Example</StartupObject>
-    <RootNamespace>Bwl.Hardware.USB_I2C_SPI.ExampleLsm303</RootNamespace>
-    <AssemblyName>Bwl.Hardware.USB-I2C-SPI.ExampleLsm303</AssemblyName>
+    <StartupObject>Bwl.Hardware.USB_I2C_SPI.Example.AppExample</StartupObject>
+    <RootNamespace>Bwl.Hardware.USB_I2C_SPI.Example</RootNamespace>
+    <AssemblyName>Bwl.Hardware.USB-I2C-SPI.Example</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Console</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -19,8 +19,8 @@
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
-    <OutputPath>..\debug\examples\LSM 303\</OutputPath>
-    <DocumentationFile>Bwl.Hardware.USB-I2C-SPI.ExampleLsm303.xml</DocumentationFile>
+    <OutputPath>..\debug\bwl-usb-i2c-spi-example\</OutputPath>
+    <DocumentationFile>Bwl.Hardware.USB-I2C-SPI.Example.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -29,8 +29,8 @@
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
-    <OutputPath>..\release\examples\LSM 303\</OutputPath>
-    <DocumentationFile>Bwl.Hardware.USB-I2C-SPI.ExampleLsm303.xml</DocumentationFile>
+    <OutputPath>..\release\bwl-usb-i2c-spi-example\</OutputPath>
+    <DocumentationFile>Bwl.Hardware.USB-I2C-SPI.Example.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -46,19 +46,26 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bwl.Hardware.USB-I2C-SPI.Lib">
+      <HintPath>..\refs\Bwl.Hardware.USB-I2C-SPI.Lib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
     <Import Include="System.Diagnostics" />
     <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LSM303Example.vb" />
+    <Compile Include="AppExample.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -93,12 +100,7 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Bwl.Hardware.USB-I2C-SPI.Lib\Bwl.Hardware.USB-I2C-SPI.Lib.vbproj">
-      <Project>{1ba8a88c-f501-46e1-b6da-89fcd27f0b6b}</Project>
-      <Name>Bwl.Hardware.USB-I2C-SPI.Lib</Name>
-    </ProjectReference>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
