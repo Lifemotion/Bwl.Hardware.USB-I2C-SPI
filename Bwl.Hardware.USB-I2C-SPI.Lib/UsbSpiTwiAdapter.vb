@@ -70,7 +70,7 @@ Public Class UsbSpiTwiAdapter
         Throw New Exception("GetAdapterName: Adapter not responding!")
     End Function
 
-    Private Function FindProcess()
+    Private Sub FindProcess()
         While Not isConnected()
             Dim ports() = IO.Ports.SerialPort.GetPortNames()
             For Each port As String In ports
@@ -90,8 +90,7 @@ Public Class UsbSpiTwiAdapter
                 End If
             Next
         End While
-
-    End Function
+    End Sub
 
     ''' <summary>
     ''' Закрыть текущее соединение
@@ -117,10 +116,9 @@ Public Class UsbSpiTwiAdapter
     ''' <summary>
     ''' Записать регистр по интерфейсу I2C (TWI).
     ''' </summary>
-    ''' <param name="deviсe_addr">Адрес устройства на шине I2C</param>
+    ''' <param name="device_addr">Адрес устройства на шине I2C</param>
     ''' <param name="reg_addr">Адрес регистра устройства.</param>
     ''' <param name="reg_value">Значение регистра.</param>
-    ''' <returns>Значение прочитанного регистра.</returns>
     Public Sub TwiWriteRegister(device_addr As Byte, reg_addr As Byte, reg_value As Byte)
         Dim args(2) As Byte
         args(0) = device_addr
@@ -132,7 +130,7 @@ Public Class UsbSpiTwiAdapter
     ''' <summary>
     ''' Записать регистр по интерфейсу I2C (TWI).
     ''' </summary>
-    ''' <param name="deviсe_addr">Адрес устройства на шине I2C</param>
+    ''' <param name="device_addr">Адрес устройства на шине I2C</param>
     ''' <param name="read_from">Адрес первого регистра</param>
     ''' <param name="count">Количество регистров, которые нужно прочитать.</param>
     ''' <returns>Массив значений регистров</returns>
