@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports System.IO.Ports
+Imports System.Management
 Imports System.Threading
 Imports Bwl.Framework
 
@@ -17,8 +18,6 @@ Public Class Form1
         textSpiCycleDelay.Text = "1000"
         textSpiDelayCmd.Text = "100"
         textI2CPeriod.Text = "500"
-        _adp = New UsbSpiTwiAdapter()
-        _adp.Open()
         Dim DeviceSearchProcess = New Thread(AddressOf FindAdapter)
         DeviceSearchProcess.Start()
         _logger.AddMessage("Поиск адаптера...")
@@ -30,15 +29,22 @@ Public Class Form1
             Return
         End If
         If Not _adp.isConnected Then
-            _logger.AddWarning("Адаптер не отвечает")
+            _logger.AddWarning("Соединение не установлено")
             Return
         End If
         If dev_addr.Text.Length = 0 Or rd_reg_addr.Text.Length = 0 Then
             _logger.AddMessage("Заполните поля!")
             Return
         End If
-        Dim addr As Byte = Convert.ToByte(dev_addr.Text, 16)
-        Dim reg_addr As Byte = Convert.ToByte(rd_reg_addr.Text, 16)
+        Dim addr As Byte = 0
+        Dim reg_addr As Byte = 0
+        Try
+            addr = Convert.ToByte(dev_addr.Text, 16)
+            reg_addr = Convert.ToByte(rd_reg_addr.Text, 16)
+        Catch ex As Exception
+            _logger.AddWarning("Значения полей должны быть в формате FF")
+            Return
+        End Try
         Dim resp As Byte = _adp.TwiReadRegister(addr, reg_addr)
         singleValueBox.Text = BitConverter.ToString(New Byte() {resp})
         _logger.AddMessage("REG 0x" + rd_reg_addr.Text + ": 0x" + singleValueBox.Text)
@@ -58,10 +64,18 @@ Public Class Form1
             _logger.AddMessage("Заполните поля!")
             Return
         End If
-        Dim rg_addr As Byte = Convert.ToByte(wr_reg_addr.Text, 16)
+        Dim rg_addr As Byte = 0
+        Dim rg_value As Byte = 0
+        Dim addr As Byte = 0
+        Try
+            rg_value = Convert.ToByte(reg_val.Text, 16)
+            addr = Convert.ToByte(dev_addr.Text, 16)
+            rg_addr = Convert.ToByte(wr_reg_addr.Text, 16)
+        Catch ex As Exception
+            _logger.AddWarning("Значения полей должны быть в формате FF")
+            Return
+        End Try
         rd_reg_addr.Text = wr_reg_addr.Text
-        Dim rg_value As Byte = Convert.ToByte(reg_val.Text, 16)
-        Dim addr As Byte = Convert.ToByte(dev_addr.Text, 16)
         _adp.TwiWriteRegister(addr, rg_addr, rg_value)
         _logger.AddMessage("В регистр 0x" + wr_reg_addr.Text + " записано 0x" + reg_val.Text)
     End Sub
@@ -81,9 +95,17 @@ Public Class Form1
             Return
         End If
 
-        Dim rg_addr As Byte = Convert.ToByte(rd_some_reg_addr.Text, 16)
-        Dim count As Byte = Convert.ToByte(rd_cnt.Text, 16)
-        Dim addr As Byte = Convert.ToByte(dev_addr.Text, 16)
+        Dim rg_addr As Byte = 0
+        Dim count As Byte = 0
+        Dim addr As Byte = 0
+        Try
+            rg_addr = Convert.ToByte(rd_some_reg_addr.Text, 16)
+            count = Convert.ToByte(rd_cnt.Text, 16)
+            addr = Convert.ToByte(dev_addr.Text, 16)
+        Catch ex As Exception
+            _logger.AddWarning("Значения полей должны быть в формате FF")
+            Return
+        End Try
         Dim resp = _adp.TwiReadRegistersArray(addr, rg_addr, count)
         incom_data.Text = incom_data.Text + "0x" + BitConverter.ToString(New Byte() {rg_addr}) + ": 0x" + BitConverter.ToString(resp).Replace("-", " 0x") + Environment.NewLine
         incom_data.SelectionStart = incom_data.Text.Length
@@ -301,9 +323,67 @@ Public Class Form1
     End Sub
 
     Private Sub FindAdapter()
+        _adp = New UsbSpiTwiAdapter()
+        _adp.Open()
         While Not _adp.isConnected()
             Thread.Sleep(300)
         End While
         _logger.AddMessage(_adp.GetAdapterName)
+    End Sub
+
+    Private Sub UploadFrimware(com As String)
+        Dim oProcess As New Process()
+
+        Dim oStartInfo As New ProcessStartInfo("avrdude.exe", "-V -F -C avrdude.conf -p atmega32u4 -cavr109 -P " + com + " -b57600 -U flash:w:firmware.hex -vvvv")
+        oStartInfo.UseShellExecute = False
+        oStartInfo.RedirectStandardOutput = False
+        oStartInfo.CreateNoWindow = False
+        oProcess.StartInfo = oStartInfo
+        oProcess.Start()
+        Thread.Sleep(1000)
+        Dim timer = New Stopwatch()
+        timer.Start()
+        oProcess.WaitForExit(10000)
+        textUpgrade.Text = "Done."
+        timer.Stop()
+        If (timer.ElapsedMilliseconds / 1000 > 3) Then
+            _adp.Close()
+            Dim DeviceSearchProcess = New Thread(AddressOf FindAdapter)
+            DeviceSearchProcess.Start()
+            Tabs.SelectedIndex = 0
+        End If
+    End Sub
+
+    Private Sub bUpdate_Click(sender As Object, e As EventArgs) Handles bUpdate.Click
+
+        Dim fileDialog As New OpenFileDialog()
+        fileDialog.Filter = "hex files | *.hex"
+        fileDialog.FilterIndex = 2
+        fileDialog.RestoreDirectory = True
+        If fileDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+            Dim fileName = fileDialog.FileName
+            MessageBox.Show("Please, reset your board and press OK")
+            Try
+                Dim searcher As New ManagementObjectSearcher("root\CIMV2", "SELECT * FROM Win32_PnPEntity")
+                For Each queryObj As ManagementObject In searcher.Get()
+                    If InStr(queryObj("Caption"), "(COM") > 0 Then
+                        Dim deviceName = queryObj("Caption").ToString
+                        If deviceName.ToLower.Contains("bootloader") Then
+                            textUpgrade.Text = "Uprading: " + deviceName
+                            deviceName = deviceName.Split("(")(1).Split(")")(0)
+                            If File.Exists("firmware.hex") Then
+                                File.Delete("firmware.hex")
+                            End If
+                            File.Copy(fileName, "firmware.hex")
+                            UploadFrimware(deviceName)
+                        End If
+                    End If
+                Next
+            Catch err As ManagementException
+                _logger.AddError(err.Message)
+            End Try
+        End If
+
+
     End Sub
 End Class

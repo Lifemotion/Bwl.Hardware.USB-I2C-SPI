@@ -55,7 +55,7 @@ Public Class UsbSpiTwiAdapter
                 Return False
             End If
         Catch ex As Exception
-            Return True
+            Return False
         End Try
     End Function
 
@@ -74,21 +74,26 @@ Public Class UsbSpiTwiAdapter
         While Not isConnected()
             Dim ports() = IO.Ports.SerialPort.GetPortNames()
             For Each port As String In ports
-                _ss.SerialDevice.DeviceAddress = port
-                _ss.Connect()
-                Dim info = _ss.RequestDeviceInfo(0)
-                If info.Response.ResponseState = ResponseState.ok Then
-                    If Not info.DeviceName.Contains("Adapter") Then
+                Try
+                    _ss.SerialDevice.DeviceAddress = port
+                    _ss.Connect()
+                    Dim info = _ss.RequestDeviceInfo(0)
+                    If info.Response.ResponseState = ResponseState.ok Then
+                        If Not info.DeviceName.Contains("Adapter") Then
+                            _ss.SerialDevice.DeviceAddress = ""
+                            _ss.Disconnect()
+                        Else
+                            _connectionState = True
+                        End If
+                    Else
                         _ss.SerialDevice.DeviceAddress = ""
                         _ss.Disconnect()
-                    Else
-                        _connectionState = True
                     End If
-                Else
-                    _ss.SerialDevice.DeviceAddress = ""
-                    _ss.Disconnect()
-                End If
+                Catch ex As Exception
+
+                End Try
             Next
+            Threading.Thread.Sleep(2000)
         End While
     End Sub
 
@@ -110,7 +115,10 @@ Public Class UsbSpiTwiAdapter
         args(0) = deviсe_addr
         args(1) = reg_addr
         Dim resp = _ss.Request(0, 1, args)
-        Return resp.Data(0)
+        If resp.ResponseState = ResponseState.ok Then
+            Return resp.Data(0)
+        End If
+        Return 0
     End Function
 
     ''' <summary>

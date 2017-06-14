@@ -72,7 +72,11 @@ Partial Class Form1
         Me.bSPI_Read = New System.Windows.Forms.Button()
         Me.spi_incom_data = New System.Windows.Forms.TextBox()
         Me.SPI_data_to_write = New System.Windows.Forms.TextBox()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.Tabs = New System.Windows.Forms.TabControl()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.textUpgrade = New System.Windows.Forms.TextBox()
+        Me.bUpdate = New System.Windows.Forms.Button()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
@@ -84,7 +88,8 @@ Partial Class Form1
         Me.GroupBox7.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
+        Me.Tabs.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
         Me.SuspendLayout()
         '
         'logWriter
@@ -101,7 +106,7 @@ Partial Class Form1
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(605, 307)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "I2C адаптер"
+        Me.TabPage2.Text = "I2C"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'GroupBox5
@@ -425,7 +430,7 @@ Partial Class Form1
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(605, 307)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "SPI адаптер"
+        Me.TabPage1.Text = "SPI"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'Button2
@@ -606,28 +611,67 @@ Partial Class Form1
         Me.SPI_data_to_write.Size = New System.Drawing.Size(288, 101)
         Me.SPI_data_to_write.TabIndex = 0
         '
-        'TabControl1
+        'Tabs
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(0, 27)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(613, 333)
-        Me.TabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
-        Me.TabControl1.TabIndex = 33
+        Me.Tabs.Controls.Add(Me.TabPage1)
+        Me.Tabs.Controls.Add(Me.TabPage2)
+        Me.Tabs.Controls.Add(Me.TabPage3)
+        Me.Tabs.Location = New System.Drawing.Point(0, 27)
+        Me.Tabs.Name = "Tabs"
+        Me.Tabs.SelectedIndex = 0
+        Me.Tabs.Size = New System.Drawing.Size(613, 333)
+        Me.Tabs.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
+        Me.Tabs.TabIndex = 33
+        '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.Label15)
+        Me.TabPage3.Controls.Add(Me.textUpgrade)
+        Me.TabPage3.Controls.Add(Me.bUpdate)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(605, 307)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "Upload Firmware"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(8, 20)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(40, 13)
+        Me.Label15.TabIndex = 2
+        Me.Label15.Text = "Status:"
+        '
+        'textUpgrade
+        '
+        Me.textUpgrade.Location = New System.Drawing.Point(54, 17)
+        Me.textUpgrade.Name = "textUpgrade"
+        Me.textUpgrade.Size = New System.Drawing.Size(316, 20)
+        Me.textUpgrade.TabIndex = 1
+        '
+        'bUpdate
+        '
+        Me.bUpdate.Location = New System.Drawing.Point(376, 15)
+        Me.bUpdate.Name = "bUpdate"
+        Me.bUpdate.Size = New System.Drawing.Size(223, 23)
+        Me.bUpdate.TabIndex = 0
+        Me.bUpdate.Text = "Find and update"
+        Me.bUpdate.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(620, 512)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.Tabs)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.Text = "TWI/SPI Adaper 1.0"
-        Me.Controls.SetChildIndex(Me.TabControl1, 0)
+        Me.Controls.SetChildIndex(Me.Tabs, 0)
         Me.Controls.SetChildIndex(Me.logWriter, 0)
         Me.TabPage2.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
@@ -649,7 +693,9 @@ Partial Class Form1
         Me.GroupBox6.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        Me.TabControl1.ResumeLayout(False)
+        Me.Tabs.ResumeLayout(False)
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -705,5 +751,9 @@ Partial Class Form1
     Friend WithEvents bSPI_Read As Button
     Friend WithEvents spi_incom_data As TextBox
     Friend WithEvents SPI_data_to_write As TextBox
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents Tabs As TabControl
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents Label15 As Label
+    Friend WithEvents textUpgrade As TextBox
+    Friend WithEvents bUpdate As Button
 End Class
