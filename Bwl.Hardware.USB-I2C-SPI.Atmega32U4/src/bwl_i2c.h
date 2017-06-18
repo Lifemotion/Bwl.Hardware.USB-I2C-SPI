@@ -10,12 +10,12 @@
 #ifndef BWL_I2C_H_
 #define BWL_I2C_H_
 
-void i2c_wait(void);
-void i2c_start(void) ;
-void i2c_write_byte(char byte);
-char i2c_read_byte(void);
-char i2c_read_last_byte(void);
-void i2c_stop(void);
+void i2c_wait();
+void i2c_start() ;
+unsigned char i2c_write_byte(char byte) ;
+char i2c_read_byte() ;
+char i2c_read_last_byte() ;
+void i2c_stop();
 
 /*Need to enable pull-ups on I2C pins and set I2C bitrate
 	PORTC&=(~(1<<PORTC5));

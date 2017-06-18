@@ -7,44 +7,36 @@
  * Version: 01.07.2016
  */ 
 #include <avr/io.h>
-#include "bwl_i2c.h"
 
 void i2c_wait()
 {
 	unsigned int i=0;
-	while ((!(TWCR & (1 << TWINT))));
+	while ((!(TWCR & (1 << TWINT)))&(i<2500)){i++;}
 }
 
 void i2c_start() {
-	unsigned int i=0;
-	TWCR = 0;
 	TWCR = (1 << TWINT) | (1 << TWSTA) | (1 << TWEN);
-	i2c_wait();
-	while((TWSR & 0xF8)!= 0x08); 
+    i2c_wait();
 }
 
-void i2c_write_byte(char byte) {
-	TWDR=byte;
-	TWCR=(1<<TWINT)|(1<<TWEN);
-	unsigned char i=0;
-	while ((!(TWCR & (1 << TWINT)))){i++;}
-	i=0;
-	while(((TWSR & 0xF8) != 0x28)){i++;}
+unsigned char i2c_write_byte(char byte)
+{
+	TWDR = byte;
+	TWCR = (1 << TWINT) | (1 << TWEN);
+	i2c_wait();
+	unsigned char result = TWSR & 0xF8;
+	if (result == 0x18 || result == 0x40 || result == 0x28) return 1; else return 0;
 }
 
 char i2c_read_byte() {
 	TWCR = (1 << TWINT) | (1 << TWEA) | (1 << TWEN);
-	while (!(TWCR & (1<<TWINT))); // Wait till complete TWDR byte transmitted
-	unsigned char i=0;
-	while((TWSR & 0xF8) != 0x50);
+	i2c_wait();
 	return TWDR;
 }
 
 char i2c_read_last_byte() {
-	TWCR=(1<<TWINT)|(1<<TWEN);    // Clear TWI interrupt flag,Enable TWI
-	while (!(TWCR & (1<<TWINT))); // Wait till complete TWDR byte transmitted
-	unsigned char i=0;
-	while((TWSR & 0xF8) != 0x58);
+	TWCR = (1 << TWINT) | (1 << TWEN);
+	i2c_wait();
 	return TWDR;
 }
 

@@ -71,28 +71,30 @@ Public Class UsbSpiTwiAdapter
     End Function
 
     Private Sub FindProcess()
-        While Not isConnected()
-            Dim ports() = IO.Ports.SerialPort.GetPortNames()
-            For Each port As String In ports
-                Try
-                    _ss.SerialDevice.DeviceAddress = port
-                    _ss.Connect()
-                    Dim info = _ss.RequestDeviceInfo(0)
-                    If info.Response.ResponseState = ResponseState.ok Then
-                        If Not info.DeviceName.Contains("Adapter") Then
+        While True
+            If Not isConnected() Then
+                Dim ports() = IO.Ports.SerialPort.GetPortNames()
+                For Each port As String In ports
+                    Try
+                        _ss.SerialDevice.DeviceAddress = port
+                        _ss.Connect()
+                        Dim info = _ss.RequestDeviceInfo(0)
+                        If info.Response.ResponseState = ResponseState.ok Then
+                            If Not info.DeviceName.Contains("Adapter") Then
+                                _ss.SerialDevice.DeviceAddress = ""
+                                _ss.Disconnect()
+                            Else
+                                _connectionState = True
+                            End If
+                        Else
                             _ss.SerialDevice.DeviceAddress = ""
                             _ss.Disconnect()
-                        Else
-                            _connectionState = True
                         End If
-                    Else
-                        _ss.SerialDevice.DeviceAddress = ""
-                        _ss.Disconnect()
-                    End If
-                Catch ex As Exception
+                    Catch ex As Exception
 
-                End Try
-            Next
+                    End Try
+                Next
+            End If
             Threading.Thread.Sleep(2000)
         End While
     End Sub
@@ -116,8 +118,15 @@ Public Class UsbSpiTwiAdapter
         args(1) = reg_addr
         Dim resp = _ss.Request(0, 1, args)
         If resp.ResponseState = ResponseState.ok Then
-            Return resp.Data(0)
+            If resp.Data(0) = 0 Then
+                Throw New Exception("No ACK")
+            End If
+            Return resp.Data(1)
+            Else
+                _ss.Disconnect()
+            _ss = New SimplSerialBus()
         End If
+
         Return 0
     End Function
 
@@ -132,7 +141,15 @@ Public Class UsbSpiTwiAdapter
         args(0) = device_addr
         args(1) = reg_addr
         args(2) = reg_value
-        _ss.Request(0, 2, args)
+        Dim resp = _ss.Request(0, 2, args)
+        If resp.ResponseState <> ResponseState.ok Then
+            _ss.Disconnect()
+            _ss = New SimplSerialBus()
+        Else
+            If resp.Data(0) = 0 Then
+                Throw New Exception("No ACK")
+            End If
+        End If
     End Sub
 
     ''' <summary>
@@ -148,8 +165,22 @@ Public Class UsbSpiTwiAdapter
         args(1) = read_from
         args(2) = count
         Dim resp = _ss.Request(0, 3, args)
+        If resp.ResponseState <> ResponseState.ok Then
+            _ss.Disconnect()
+            _ss = New SimplSerialBus()
+        Else
+            If resp.Data(0) = 0 Then
+                Throw New Exception("No ACK")
+            End If
+            Dim data() As Byte
+            Array.Copy(resp.Data, 1, data, 0, resp.Data.Length - 1)
+            Return data
+        End If
         Return resp.Data
     End Function
+
+
+
 
     ''' <summary>
     ''' Запись данных по интерфейсу SPI.
@@ -157,7 +188,13 @@ Public Class UsbSpiTwiAdapter
     ''' <param name="data">Данны для записи</param>
     ''' <returns>Ответ ведомого устройства в байтах.</returns>
     Public Function SpiWriteArray(data As Byte())
-        Return _ss.Request(0, 4, data).Data
+        Dim resp = _ss.Request(0, 4, data)
+        If resp.ResponseState <> ResponseState.ok Then
+            _ss.Disconnect()
+            _ss = New SimplSerialBus()
+        Else
+            Return resp.Data
+        End If
     End Function
 
     ''' <summary>
@@ -166,8 +203,13 @@ Public Class UsbSpiTwiAdapter
     ''' <param name="data">Данные, которые будут переданы ведомому во время чтения.</param>
     ''' <returns>Ответ ведомого устройства в байтах.</returns>
     Public Function SpiReadArray(data As Byte())
-        
-        Return _ss.Request(0, 4, data).Data
+        Dim resp = _ss.Request(0, 4, data)
+        If resp.ResponseState <> ResponseState.ok Then
+            _ss.Disconnect()
+            _ss = New SimplSerialBus()
+        Else
+            Return resp.Data
+        End If
     End Function
 
 

@@ -77,6 +77,7 @@ Partial Class Form1
         Me.Label15 = New System.Windows.Forms.Label()
         Me.textUpgrade = New System.Windows.Forms.TextBox()
         Me.bUpdate = New System.Windows.Forms.Button()
+        Me.bScanTwi = New System.Windows.Forms.Button()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
@@ -111,6 +112,7 @@ Partial Class Form1
         '
         'GroupBox5
         '
+        Me.GroupBox5.Controls.Add(Me.bScanTwi)
         Me.GroupBox5.Controls.Add(Me.GroupBox8)
         Me.GroupBox5.Controls.Add(Me.dev_addr)
         Me.GroupBox5.Controls.Add(Me.label1)
@@ -661,6 +663,15 @@ Partial Class Form1
         Me.bUpdate.Text = "Find and update"
         Me.bUpdate.UseVisualStyleBackColor = True
         '
+        'bScanTwi
+        '
+        Me.bScanTwi.Location = New System.Drawing.Point(399, 26)
+        Me.bScanTwi.Name = "bScanTwi"
+        Me.bScanTwi.Size = New System.Drawing.Size(153, 23)
+        Me.bScanTwi.TabIndex = 34
+        Me.bScanTwi.Text = "Scan bus"
+        Me.bScanTwi.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -756,4 +767,5 @@ Partial Class Form1
     Friend WithEvents Label15 As Label
     Friend WithEvents textUpgrade As TextBox
     Friend WithEvents bUpdate As Button
+    Friend WithEvents bScanTwi As Button
 End Class

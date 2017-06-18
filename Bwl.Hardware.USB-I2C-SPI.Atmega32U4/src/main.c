@@ -88,15 +88,15 @@ void sserial_process_request()
 		char regiser  = sserial_request.data[1];
 		char resp = 0;
 	    i2c_start();
-		i2c_write_byte(dev_addr&WR);
+		sserial_response.data[0] =i2c_write_byte(dev_addr&WR);
 		i2c_write_byte(regiser);
 		i2c_start();
 		i2c_write_byte(dev_addr|RD);
 		resp = i2c_read_last_byte();
 		i2c_stop();
 		sserial_response.result    = 0;
-		sserial_response.datalength= 1;
-		sserial_response.data[0]   = resp;
+		sserial_response.datalength= 2;
+		sserial_response.data[1]   = resp;
 		sserial_send_response();
 	}
 
@@ -107,12 +107,12 @@ void sserial_process_request()
 		char register_value = sserial_request.data[2];
 
 		i2c_start();
-		i2c_write_byte(dev_addr&WR);
+		sserial_response.data[0] = i2c_write_byte(dev_addr&WR);
 		i2c_write_byte(regiser);
 		i2c_write_byte(register_value);
 		i2c_stop();
 		sserial_response.result    = 0;
-		sserial_response.datalength= 0;
+		sserial_response.datalength= 1;
 		sserial_send_response();
 	}
 
@@ -123,17 +123,17 @@ void sserial_process_request()
 		char count = sserial_request.data[2];
 		int i = 0;
 		i2c_start();
-		i2c_write_byte(dev_addr&WR);
+		sserial_response.data[0] = i2c_write_byte(dev_addr&WR);
 		i2c_write_byte(regiser);
 		i2c_start();
 		i2c_write_byte(dev_addr|RD);
-		for(i=0;i<(count-1);i++){
+		for(i=1;i<count;i++){
 			sserial_response.data[i]   =  i2c_read_byte();
 		}
-		sserial_response.data[count-1] =  i2c_read_last_byte();
+		sserial_response.data[count] =  (char)i2c_read_last_byte();
 		i2c_stop();
 		sserial_response.result    = 0;
-		sserial_response.datalength= count;
+		sserial_response.datalength= count+1;
 		sserial_send_response();
 	}
 

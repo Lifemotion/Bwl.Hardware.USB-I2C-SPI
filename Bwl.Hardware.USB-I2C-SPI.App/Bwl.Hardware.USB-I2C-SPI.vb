@@ -45,9 +45,14 @@ Public Class Form1
             _logger.AddWarning("Значения полей должны быть в формате FF")
             Return
         End Try
-        Dim resp As Byte = _adp.TwiReadRegister(addr, reg_addr)
-        singleValueBox.Text = BitConverter.ToString(New Byte() {resp})
-        _logger.AddMessage("REG 0x" + rd_reg_addr.Text + ": 0x" + singleValueBox.Text)
+        Try
+            Dim resp As Byte = _adp.TwiReadRegister(addr, reg_addr)
+            singleValueBox.Text = BitConverter.ToString(New Byte() {resp})
+            _logger.AddMessage("REG 0x" + rd_reg_addr.Text + ": 0x" + singleValueBox.Text)
+        Catch ex As Exception
+            _logger.AddError(ex.Message)
+        End Try
+
     End Sub
 
 
@@ -76,7 +81,12 @@ Public Class Form1
             Return
         End Try
         rd_reg_addr.Text = wr_reg_addr.Text
-        _adp.TwiWriteRegister(addr, rg_addr, rg_value)
+        Try
+            _adp.TwiWriteRegister(addr, rg_addr, rg_value)
+        Catch ex As Exception
+            _logger.AddError(ex.Message)
+        End Try
+
         _logger.AddMessage("В регистр 0x" + wr_reg_addr.Text + " записано 0x" + reg_val.Text)
     End Sub
 
@@ -89,12 +99,10 @@ Public Class Form1
             _logger.AddWarning("Адаптер не отвечает")
             Return
         End If
-
         If rd_some_reg_addr.Text.Length = 0 Or rd_cnt.Text.Length = 0 Or dev_addr.Text.Length = 0 Then
             _logger.AddMessage("Заполните поля!")
             Return
         End If
-
         Dim rg_addr As Byte = 0
         Dim count As Byte = 0
         Dim addr As Byte = 0
@@ -106,11 +114,15 @@ Public Class Form1
             _logger.AddWarning("Значения полей должны быть в формате FF")
             Return
         End Try
-        Dim resp = _adp.TwiReadRegistersArray(addr, rg_addr, count)
-        incom_data.Text = incom_data.Text + "0x" + BitConverter.ToString(New Byte() {rg_addr}) + ": 0x" + BitConverter.ToString(resp).Replace("-", " 0x") + Environment.NewLine
-        incom_data.SelectionStart = incom_data.Text.Length
-        incom_data.ScrollToCaret()
-        _logger.AddMessage("Прочитано регистров: " + rd_cnt.Text)
+        Try
+            Dim resp = _adp.TwiReadRegistersArray(addr, rg_addr, count)
+            incom_data.Text = incom_data.Text + "0x" + BitConverter.ToString(New Byte() {rg_addr}) + ": 0x" + BitConverter.ToString(resp).Replace("-", " 0x") + Environment.NewLine
+            incom_data.SelectionStart = incom_data.Text.Length
+            incom_data.ScrollToCaret()
+            _logger.AddMessage("Прочитано регистров: " + rd_cnt.Text)
+        Catch ex As Exception
+            _logger.AddError(ex.Message)
+        End Try
     End Sub
 
     Private Sub bClear_Click(sender As Object, e As EventArgs) Handles bClear.Click
@@ -355,7 +367,7 @@ Public Class Form1
     End Sub
 
     Private Sub bUpdate_Click(sender As Object, e As EventArgs) Handles bUpdate.Click
-
+        Dim findFlag As Boolean = False
         Dim fileDialog As New OpenFileDialog()
         fileDialog.Filter = "hex files | *.hex"
         fileDialog.FilterIndex = 2
@@ -376,14 +388,31 @@ Public Class Form1
                             End If
                             File.Copy(fileName, "firmware.hex")
                             UploadFrimware(deviceName)
+                            findFlag = True
                         End If
                     End If
                 Next
             Catch err As ManagementException
                 _logger.AddError(err.Message)
             End Try
+            If findFlag Then
+                _logger.AddMessage("Arduino prepared")
+            Else
+                _logger.AddMessage("Arduino bootloader not detected")
+            End If
         End If
+    End Sub
 
-
+    Private Sub bScanTwi_Click(sender As Object, e As EventArgs) Handles bScanTwi.Click
+        Dim count As Int16 = 0
+        For b As Byte = 0 To &H7F
+            Try
+                _adp.TwiReadRegister(b * 2 + 1, 16)
+                _logger.AddMessage("Finded device address: 0x" + BitConverter.ToString(New Byte() {b * 2 + 1}))
+                count = count + 1
+            Catch ex As Exception
+            End Try
+        Next
+        _logger.AddMessage("Finded " + count.ToString + " devices")
     End Sub
 End Class
