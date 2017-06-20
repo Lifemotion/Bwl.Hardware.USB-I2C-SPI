@@ -175,7 +175,7 @@ Public Class UsbSpiTwiAdapter
             If resp.Data(0) = 0 Then
                 Throw New Exception("No ACK")
             End If
-            Dim data(resp.Data.Length - 1) As Byte
+            Dim data() As Byte
             Array.Copy(resp.Data, 1, data, 0, resp.Data.Length - 1)
             Return data
         End If
@@ -245,7 +245,7 @@ Public Class UsbSpiTwiAdapter
     ''' <summary>
     ''' Загрузка прошивки адаптера через штатный загрузчик Arduino
     ''' </summary>
-    ''' <param name="hexPath"></param>
+    ''' <param name="hexPath">Абсолютный путь файла прошивки</param>
     ''' <returns></returns>
     Public Function UploadFirmware(hexPath As String)
         Try

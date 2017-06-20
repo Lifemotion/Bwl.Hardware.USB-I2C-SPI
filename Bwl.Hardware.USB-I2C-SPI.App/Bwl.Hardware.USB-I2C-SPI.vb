@@ -11,9 +11,6 @@ Public Class Form1
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        comboSupportedBoards.Items.Add("Arduino mega2560")
-        comboSupportedBoards.Items.Add("Arduino micro")
-        comboSupportedBoards.Items.Add("Arduino uno")
         File.Delete("spi_log.txt")
         File.Delete("i2c_log.txt")
         Dim ports As String() = SerialPort.GetPortNames()
