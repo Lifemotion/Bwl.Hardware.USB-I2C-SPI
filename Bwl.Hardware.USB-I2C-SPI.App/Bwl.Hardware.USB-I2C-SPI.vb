@@ -11,6 +11,9 @@ Public Class Form1
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        comboSupportedBoards.Items.Add("Arduino mega2560")
+        comboSupportedBoards.Items.Add("Arduino micro")
+        comboSupportedBoards.Items.Add("Arduino uno")
         File.Delete("spi_log.txt")
         File.Delete("i2c_log.txt")
         Dim ports As String() = SerialPort.GetPortNames()
@@ -343,28 +346,6 @@ Public Class Form1
         _logger.AddMessage(_adp.GetAdapterName)
     End Sub
 
-    Private Sub UploadFrimware(com As String)
-        Dim oProcess As New Process()
-
-        Dim oStartInfo As New ProcessStartInfo("avrdude.exe", "-V -F -C avrdude.conf -p atmega32u4 -cavr109 -P " + com + " -b57600 -U flash:w:firmware.hex -vvvv")
-        oStartInfo.UseShellExecute = False
-        oStartInfo.RedirectStandardOutput = False
-        oStartInfo.CreateNoWindow = False
-        oProcess.StartInfo = oStartInfo
-        oProcess.Start()
-        Thread.Sleep(1000)
-        Dim timer = New Stopwatch()
-        timer.Start()
-        oProcess.WaitForExit(10000)
-        textUpgrade.Text = "Done."
-        timer.Stop()
-        If (timer.ElapsedMilliseconds / 1000 > 3) Then
-            _adp.Close()
-            Dim DeviceSearchProcess = New Thread(AddressOf FindAdapter)
-            DeviceSearchProcess.Start()
-            Tabs.SelectedIndex = 0
-        End If
-    End Sub
 
     Private Sub bUpdate_Click(sender As Object, e As EventArgs) Handles bUpdate.Click
         Dim findFlag As Boolean = False
@@ -374,32 +355,9 @@ Public Class Form1
         fileDialog.RestoreDirectory = True
         If fileDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
             Dim fileName = fileDialog.FileName
-            MessageBox.Show("Please, reset your board and press OK")
-            Try
-                Dim searcher As New ManagementObjectSearcher("root\CIMV2", "SELECT * FROM Win32_PnPEntity")
-                For Each queryObj As ManagementObject In searcher.Get()
-                    If InStr(queryObj("Caption"), "(COM") > 0 Then
-                        Dim deviceName = queryObj("Caption").ToString
-                        If deviceName.ToLower.Contains("bootloader") Then
-                            textUpgrade.Text = "Uprading: " + deviceName
-                            deviceName = deviceName.Split("(")(1).Split(")")(0)
-                            If File.Exists("firmware.hex") Then
-                                File.Delete("firmware.hex")
-                            End If
-                            File.Copy(fileName, "firmware.hex")
-                            UploadFrimware(deviceName)
-                            findFlag = True
-                        End If
-                    End If
-                Next
-            Catch err As ManagementException
-                _logger.AddError(err.Message)
-            End Try
-            If findFlag Then
-                _logger.AddMessage("Arduino prepared")
-            Else
-                _logger.AddMessage("Arduino bootloader not detected")
-            End If
+            _logger.AddMessage("Uploading hex file...")
+            _adp.UploadFirmware(fileName)
+            _logger.AddMessage("Done")
         End If
     End Sub
 

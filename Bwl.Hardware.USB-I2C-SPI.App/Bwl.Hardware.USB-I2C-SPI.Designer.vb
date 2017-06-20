@@ -23,6 +23,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.bScanTwi = New System.Windows.Forms.Button()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.bTWIopenLog = New System.Windows.Forms.Button()
         Me.bI2Cycles = New System.Windows.Forms.Button()
@@ -77,7 +78,7 @@ Partial Class Form1
         Me.Label15 = New System.Windows.Forms.Label()
         Me.textUpgrade = New System.Windows.Forms.TextBox()
         Me.bUpdate = New System.Windows.Forms.Button()
-        Me.bScanTwi = New System.Windows.Forms.Button()
+        Me.comboSupportedBoards = New System.Windows.Forms.ComboBox()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
@@ -125,6 +126,15 @@ Partial Class Form1
         Me.GroupBox5.TabIndex = 32
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "I2C"
+        '
+        'bScanTwi
+        '
+        Me.bScanTwi.Location = New System.Drawing.Point(399, 26)
+        Me.bScanTwi.Name = "bScanTwi"
+        Me.bScanTwi.Size = New System.Drawing.Size(153, 23)
+        Me.bScanTwi.TabIndex = 34
+        Me.bScanTwi.Text = "Scan bus"
+        Me.bScanTwi.UseVisualStyleBackColor = True
         '
         'GroupBox8
         '
@@ -627,6 +637,7 @@ Partial Class Form1
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.comboSupportedBoards)
         Me.TabPage3.Controls.Add(Me.Label15)
         Me.TabPage3.Controls.Add(Me.textUpgrade)
         Me.TabPage3.Controls.Add(Me.bUpdate)
@@ -658,19 +669,18 @@ Partial Class Form1
         '
         Me.bUpdate.Location = New System.Drawing.Point(376, 15)
         Me.bUpdate.Name = "bUpdate"
-        Me.bUpdate.Size = New System.Drawing.Size(223, 23)
+        Me.bUpdate.Size = New System.Drawing.Size(92, 23)
         Me.bUpdate.TabIndex = 0
-        Me.bUpdate.Text = "Find and update"
+        Me.bUpdate.Text = "Upload"
         Me.bUpdate.UseVisualStyleBackColor = True
         '
-        'bScanTwi
+        'comboSupportedBoards
         '
-        Me.bScanTwi.Location = New System.Drawing.Point(399, 26)
-        Me.bScanTwi.Name = "bScanTwi"
-        Me.bScanTwi.Size = New System.Drawing.Size(153, 23)
-        Me.bScanTwi.TabIndex = 34
-        Me.bScanTwi.Text = "Scan bus"
-        Me.bScanTwi.UseVisualStyleBackColor = True
+        Me.comboSupportedBoards.FormattingEnabled = True
+        Me.comboSupportedBoards.Location = New System.Drawing.Point(474, 17)
+        Me.comboSupportedBoards.Name = "comboSupportedBoards"
+        Me.comboSupportedBoards.Size = New System.Drawing.Size(125, 21)
+        Me.comboSupportedBoards.TabIndex = 3
         '
         'Form1
         '
@@ -768,4 +778,5 @@ Partial Class Form1
     Friend WithEvents textUpgrade As TextBox
     Friend WithEvents bUpdate As Button
     Friend WithEvents bScanTwi As Button
+    Friend WithEvents comboSupportedBoards As ComboBox
 End Class

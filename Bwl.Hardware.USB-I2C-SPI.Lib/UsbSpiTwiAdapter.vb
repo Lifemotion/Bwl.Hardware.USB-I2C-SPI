@@ -1,4 +1,7 @@
-﻿Imports Bwl.Hardware.SimplSerial
+﻿Imports System.IO
+Imports System.Management
+Imports System.Windows.Forms
+Imports Bwl.Hardware.SimplSerial
 
 ''' <summary>
 ''' Класс, представляет подключенный USB-TWI-SPI адаптер.
@@ -6,7 +9,7 @@
 Public Class UsbSpiTwiAdapter
     Private _ss As New SimplSerialBus()
     Private _connectionState As Boolean = False
-
+    Private _searchThread As Threading.Thread = Nothing
     ''' <summary>
     ''' Конструктор класса
     ''' </summary>
@@ -29,8 +32,8 @@ Public Class UsbSpiTwiAdapter
         If _ss.SerialDevice.DeviceAddress.Length > 0 Then
             _ss.Connect()
         Else
-            Dim th = New System.Threading.Thread(AddressOf FindProcess)
-            th.Start()
+            _searchThread = New Threading.Thread(AddressOf FindProcess)
+            _searchThread.Start()
         End If
 
     End Sub
@@ -122,8 +125,8 @@ Public Class UsbSpiTwiAdapter
                 Throw New Exception("No ACK")
             End If
             Return resp.Data(1)
-            Else
-                _ss.Disconnect()
+        Else
+            _ss.Disconnect()
             _ss = New SimplSerialBus()
         End If
 
@@ -172,7 +175,7 @@ Public Class UsbSpiTwiAdapter
             If resp.Data(0) = 0 Then
                 Throw New Exception("No ACK")
             End If
-            Dim data() As Byte
+            Dim data(resp.Data.Length - 1) As Byte
             Array.Copy(resp.Data, 1, data, 0, resp.Data.Length - 1)
             Return data
         End If
@@ -212,5 +215,61 @@ Public Class UsbSpiTwiAdapter
         End If
     End Function
 
+    Private Sub AvrdudeExec(deviceDescriptor As String)
+        If Not File.Exists("avrdude.exe") Then
+            Throw New Exception("avrdude.exe not finded")
+        End If
+        Dim oProcess As New Process()
+        Dim port = deviceDescriptor.Split("(")(1).Split(")")(0)
+        Dim cmd = ""
+        If (deviceDescriptor.ToLower.Contains("uno")) Then
+            cmd = "-V -F -C avrdude.conf -p atmega328p -carduino -P" + port + " -b115200 -D -Uflash:w:firmware.hex -vvvv"
+        ElseIf deviceDescriptor.ToLower.Contains("bootloader") Then
+            cmd = "-V -F -C avrdude.conf -p atmega32u4 -cavr109 -P " + port + " -b57600 -U flash:w:firmware.hex -vvvv"
+            MessageBox.Show("Please, reset your board and press OK")
+        Else
+            Throw New Exception("Arduino not finded or not supported")
+        End If
+        Dim oStartInfo As New ProcessStartInfo("avrdude.exe", cmd)
+        oStartInfo.UseShellExecute = False
+        oStartInfo.RedirectStandardOutput = False
+        oStartInfo.CreateNoWindow = False
+        oProcess.StartInfo = oStartInfo
+        oProcess.Start()
+        Dim timer = New Stopwatch()
+        timer.Start()
+        oProcess.WaitForExit(10000)
+        timer.Stop()
+    End Sub
+
+    ''' <summary>
+    ''' Загрузка прошивки адаптера через штатный загрузчик Arduino
+    ''' </summary>
+    ''' <param name="hexPath"></param>
+    ''' <returns></returns>
+    Public Function UploadFirmware(hexPath As String)
+        Try
+            Dim searcher As New ManagementObjectSearcher("root\CIMV2", "SELECT * FROM Win32_PnPEntity")
+            For Each queryObj As ManagementObject In searcher.Get()
+                If InStr(queryObj("Caption"), "(COM") > 0 Then
+                    Dim deviceName = queryObj("Caption").ToString
+                    If deviceName.ToLower.Contains("arduino") Or deviceName.ToLower.Contains("genuino") Then
+                        If File.Exists("firmware.hex") Then
+                            File.Delete("firmware.hex")
+                        End If
+                        File.Copy(hexPath, "firmware.hex")
+                        _searchThread.Abort()
+                        If _ss IsNot Nothing Then
+                            _ss.Disconnect()
+                        End If
+                        AvrdudeExec(deviceName)
+                        _searchThread = New Threading.Thread(AddressOf FindProcess)
+                        _searchThread.Start()
+                    End If
+                End If
+            Next
+        Catch err As ManagementException
+        End Try
+    End Function
 
 End Class

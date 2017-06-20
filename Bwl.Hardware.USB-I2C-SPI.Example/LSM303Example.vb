@@ -1,8 +1,9 @@
-﻿Module LSM303Example
+﻿Imports Bwl.Hardware.USB_I2C_SPI
+
+Module LSM303Example
     Private _lsmAddress As Byte = &H3A
 
     Sub Main()
-
         Dim adp As UsbSpiTwiAdapter = New UsbSpiTwiAdapter()
         adp.Open()
         While Not adp.isConnected
@@ -10,7 +11,8 @@
             Threading.Thread.Sleep(1000)
         End While
         Console.WriteLine("Адаптер обнаружен: " + adp.GetAdapterName)
-        If adp.TwiReadRegister(_lsmAddress, &HF) = &H49 Then
+        Dim whoIAm = adp.TwiReadRegister(_lsmAddress, &HF)
+        If whoIAm = &H49 Then
             Console.WriteLine("Обнаружен датчик LSM303")
             Console.WriteLine("Запись настроек LSM303")
             adp.TwiWriteRegister(_lsmAddress, &H1F, &H0)

@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E381A512-B3DE-4DE9-8609-5AECBAC3606E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>Bwl.Hardware.USB_I2C_SPI.Example.AppExample</StartupObject>
+    <StartupObject>Sub Main</StartupObject>
     <RootNamespace>Bwl.Hardware.USB_I2C_SPI.Example</RootNamespace>
     <AssemblyName>Bwl.Hardware.USB-I2C-SPI.Example</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -46,9 +46,6 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bwl.Hardware.USB-I2C-SPI.Lib">
-      <HintPath>..\refs\Bwl.Hardware.USB-I2C-SPI.Lib.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
@@ -99,6 +96,12 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bwl.Hardware.USB-I2C-SPI.Lib\Bwl.Hardware.USB-I2C-SPI.Lib.vbproj">
+      <Project>{1BA8A88C-F501-46E1-B6DA-89FCD27F0B6B}</Project>
+      <Name>Bwl.Hardware.USB-I2C-SPI.Lib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
