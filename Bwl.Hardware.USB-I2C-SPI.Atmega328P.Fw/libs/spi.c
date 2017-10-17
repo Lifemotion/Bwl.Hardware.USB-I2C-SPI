@@ -4,8 +4,8 @@
 
 void spi_init(void)
 {
-	DDRB |= ( 1 << 1 ) | ( 1 << 2 ) | ( 1<< 0 );
-	DDRB &= ~( 1 << 3 );
+	DDRB |= ( 1 << 5 ) | ( 1 << 3 ) | ( 1<< 2 );
+	DDRB &= ~( 1 << 4 );
 	SPCR = ( 1 << SPE ) | ( 1 << MSTR ) | ( 0 << SPR1 )| ( 0 << SPR0 );
 	SPSR = 0;     // set double SPI speed for F_osc/8
 	PORTB |= ( 1 << 0 );
@@ -20,12 +20,12 @@ void spi_write(uint8_t data)
 
 void spi_select()
 {
-	PORTB &= ~(1 << 0 );
+	PORTB &= ~(1 << 2 );
 }
 
 void spi_unselect()
 {
-	PORTB |= (1 << 0 );      
+	PORTB |= (1 << 2 );      
 }
 
 uint8_t spi_read(uint8_t data)

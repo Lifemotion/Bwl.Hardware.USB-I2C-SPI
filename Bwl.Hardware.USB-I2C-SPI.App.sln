@@ -7,6 +7,10 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Bwl.Hardware.USB-I2C-SPI.Ap
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Bwl.Hardware.USB-I2C-SPI.Lib", "Bwl.Hardware.USB-I2C-SPI.Lib\Bwl.Hardware.USB-I2C-SPI.Lib.vbproj", "{1BA8A88C-F501-46E1-B6DA-89FCD27F0B6B}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Bwl.Hardware.USB-I2C-SPI.Example", "Bwl.Hardware.USB-I2C-SPI.Example\Bwl.Hardware.USB-I2C-SPI.Example.vbproj", "{E381A512-B3DE-4DE9-8609-5AECBAC3606E}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "LoRa transmitter", "LoRa transmitter\LoRa transmitter.vbproj", "{DF53E509-0B28-4A15-9C68-FB8900318A8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{1BA8A88C-F501-46E1-B6DA-89FCD27F0B6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BA8A88C-F501-46E1-B6DA-89FCD27F0B6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BA8A88C-F501-46E1-B6DA-89FCD27F0B6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E381A512-B3DE-4DE9-8609-5AECBAC3606E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E381A512-B3DE-4DE9-8609-5AECBAC3606E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E381A512-B3DE-4DE9-8609-5AECBAC3606E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E381A512-B3DE-4DE9-8609-5AECBAC3606E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF53E509-0B28-4A15-9C68-FB8900318A8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF53E509-0B28-4A15-9C68-FB8900318A8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF53E509-0B28-4A15-9C68-FB8900318A8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF53E509-0B28-4A15-9C68-FB8900318A8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
