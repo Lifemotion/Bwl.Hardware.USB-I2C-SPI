@@ -8,7 +8,7 @@ Public Class Form1
     Inherits FormAppBase
 
     Private _adp As UsbSpiTwiAdapter = Nothing
-
+    Private _avrdudePath As StringSetting = New StringSetting(_storage, "Avrdude path", "")
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         File.Delete("spi_log.txt")
@@ -353,7 +353,7 @@ Public Class Form1
         If fileDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
             Dim fileName = fileDialog.FileName
             _logger.AddMessage("Uploading hex file...")
-            _adp.UploadFirmware(fileName)
+            _adp.UploadFirmware(fileName, _avrdudePath.Value)
             _logger.AddMessage("Done")
         End If
     End Sub

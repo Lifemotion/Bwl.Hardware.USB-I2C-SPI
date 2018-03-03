@@ -33,6 +33,7 @@ Public Class UsbSpiTwiAdapter
             _ss.Connect()
         Else
             _searchThread = New Threading.Thread(AddressOf FindProcess)
+            _searchThread.IsBackground = True
             _searchThread.Start()
         End If
 
@@ -175,8 +176,8 @@ Public Class UsbSpiTwiAdapter
             If resp.Data(0) = 0 Then
                 Throw New Exception("No ACK")
             End If
-            Dim data() As Byte
-            Array.Copy(resp.Data, 1, data, 0, resp.Data.Length - 1)
+            Dim data(resp.Data.Length - 1) As Byte
+            Array.Copy(resp.Data, 1, data, 0, data.Length)
             Return data
         End If
         Return resp.Data
@@ -190,7 +191,7 @@ Public Class UsbSpiTwiAdapter
     ''' </summary>
     ''' <param name="data">Данны для записи</param>
     ''' <returns>Ответ ведомого устройства в байтах.</returns>
-    Public Function SpiWriteArray(data As Byte())
+    Public Function SpiWriteArray(data As Byte()) As Byte()
         Dim resp = _ss.Request(0, 4, data)
         If resp.ResponseState <> ResponseState.ok Then
             _ss.Disconnect()
@@ -198,6 +199,7 @@ Public Class UsbSpiTwiAdapter
         Else
             Return resp.Data
         End If
+        Return {}
     End Function
 
     ''' <summary>
@@ -205,7 +207,7 @@ Public Class UsbSpiTwiAdapter
     ''' </summary>
     ''' <param name="data">Данные, которые будут переданы ведомому во время чтения.</param>
     ''' <returns>Ответ ведомого устройства в байтах.</returns>
-    Public Function SpiReadArray(data As Byte())
+    Public Function SpiReadArray(data As Byte()) As Byte()
         Dim resp = _ss.Request(0, 4, data)
         If resp.ResponseState <> ResponseState.ok Then
             _ss.Disconnect()
@@ -213,10 +215,11 @@ Public Class UsbSpiTwiAdapter
         Else
             Return resp.Data
         End If
+        Return {}
     End Function
 
-    Private Sub AvrdudeExec(deviceDescriptor As String)
-        If Not File.Exists("avrdude.exe") Then
+    Private Sub AvrdudeExec(deviceDescriptor As String, path As String)
+        If Not File.Exists(path + "\avrdude.exe") Then
             Throw New Exception("avrdude.exe not finded")
         End If
         Dim oProcess As New Process()
@@ -246,8 +249,7 @@ Public Class UsbSpiTwiAdapter
     ''' Загрузка прошивки адаптера через штатный загрузчик Arduino
     ''' </summary>
     ''' <param name="hexPath">Абсолютный путь файла прошивки</param>
-    ''' <returns></returns>
-    Public Function UploadFirmware(hexPath As String)
+    Public Sub UploadFirmware(hexPath As String, avrdudePath As String)
         Try
             Dim searcher As New ManagementObjectSearcher("root\CIMV2", "SELECT * FROM Win32_PnPEntity")
             For Each queryObj As ManagementObject In searcher.Get()
@@ -262,14 +264,14 @@ Public Class UsbSpiTwiAdapter
                         If _ss IsNot Nothing Then
                             _ss.Disconnect()
                         End If
-                        AvrdudeExec(deviceName)
+                        AvrdudeExec(deviceName, avrdudePath)
                         _searchThread = New Threading.Thread(AddressOf FindProcess)
+                        _searchThread.IsBackground = True
                         _searchThread.Start()
                     End If
                 End If
             Next
         Catch err As ManagementException
         End Try
-    End Function
-
+    End Sub
 End Class
